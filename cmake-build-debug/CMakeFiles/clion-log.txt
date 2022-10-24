@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/ninja.exe" -G Ninja -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1" -B "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug"
+-- Found PythonInterp: C:/Users/Ariel/AppData/Local/Programs/Python/Python310/python.exe (found version "3.10.2") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug

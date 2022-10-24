@@ -1,0 +1,15 @@
+# ninja log v5
+11	1606	6883264471747669	CMakeFiles/tpi.dir/ejercicios.obj	e8e84d371759a43a
+1	3606	6883264491708472	CMakeFiles/tpi.dir/main.obj	8b9cc690274a831e
+19	4284	6883264498580652	CMakeFiles/tpi.dir/tests/ganoTEST.obj	ff7e884851651f6e
+1611	4931	6883264505494549	CMakeFiles/tpi.dir/tests/sugerir121TEST.obj	6a02862d46c554d8
+4284	5442	6883264510535554	CMakeFiles/tpi.dir/auxiliares.obj	baa2aa25f5db9159
+3608	6092	6883264517317409	CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj	e5a5287ffec52ac4
+4932	6712	6883264523520816	CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj	5b71e4a18f98d56f
+5443	7160	6883264527839264	CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj	2bb7bfde3b147f3
+6093	7887	6883264535199566	CMakeFiles/tpi.dir/tests/perdioTEST.obj	7214e2d669febdc1
+7161	8820	6883264544604410	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	2dfc93f4ba49b3f8
+6713	17258	6883264628870556	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	9af4bd7e7ca1001
+17262	19156	6883264647973846	lib/googletest-master/googlemock/gtest/libgtestd.a	c864cd0157aa151e
+19157	19268	6883264649102671	lib/googletest-master/googlemock/gtest/libgtest_maind.a	69da526b7b13261a
+19268	21916	6883264675492273	../tpi.exe	97cd683870d7a5a1
