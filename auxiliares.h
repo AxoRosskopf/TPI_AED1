@@ -9,3 +9,8 @@
 
 #include "definiciones.h"
 
+bool tableroValido(tablero& tablero);
+bool tamanioDeTableroValido(tablero& tablero);
+bool cantidadDeMinasValida(tablero& tablero);
+
+
