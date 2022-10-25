@@ -15,7 +15,11 @@ using namespace std;
 /******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
 
 int minasAdyacentes(tablero& t, pos p) {
-    // ...
+    int result=0;
+    if (tableroValido(t) && posicionValida(p,t.size())){
+        result=numMinasAdyacentes(t,p);
+    }
+    return result;
 }
 
 /******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
