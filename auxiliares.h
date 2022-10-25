@@ -12,5 +12,9 @@
 bool tableroValido(tablero& tablero);
 bool tamanioDeTableroValido(tablero& tablero);
 bool cantidadDeMinasValida(tablero& tablero);
+bool posicionValida(pos p, int n);
+int numMinasAdyacentes(tablero& t, pos p);
+bool esAdyacenteValida(pos p, int i, int j, tablero& t);
+
 
 
