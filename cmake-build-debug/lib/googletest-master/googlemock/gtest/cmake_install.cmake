@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/lib/googletest-master/googletest
+# Install script for directory: C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/lib/googletest-master/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,25 +34,25 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/objdump.exe")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/lib/googletest-master/googletest/include/gtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/lib/googletest-master/googletest/include/gtest")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES
-    "C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/cmake-build-debug/gtest.pc"
-    "C:/Users/aicpv/Desktop/Computer Science/Algoritms/LabTP/TPI/TPI_AED1/cmake-build-debug/gtest_main.pc"
+    "C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug/gtest.pc"
+    "C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug/gtest_main.pc"
     )
 endif()
 

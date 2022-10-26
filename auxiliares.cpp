@@ -76,13 +76,7 @@ bool esAdyacenteValida(pos p, int i, int j, tablero& t){
 }
 
 
-
-
 // FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 2
-
-
-
-
 
 bool hayMinaEnPosicion(pos p, tablero& t){
     if (t[p.first][p.second] == cMINA){
@@ -125,8 +119,6 @@ bool jugadasNoRepetidas (jugadas& j){
      }
  }
 }
-
-
 
 bool esBanderita(pos p, banderitas& b){
     for(int i = 0; i<b.size(); i++){

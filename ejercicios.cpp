@@ -31,12 +31,31 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
 
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
 bool perdio(tablero& t, jugadas& j) {
-    // ...
+    bool result=false;
+    if (juegoValido(t,j)){
+        for (int i=0; i<j.size();i++){
+            if (hayMinaEnPosicion(j[i].first,t)){
+                result=true;
+            }
+        }
+    }
+    return result;
 }
 
 /******++++**************************** EJERCICIO gano ***********+++***********************/
 bool gano(tablero& t, jugadas& j) {
-    // ...
+    bool result= true;
+    if (juegoValido(t,j)){
+        for (int i=0;i<t.size();i++){
+            for (int k=0;k<t.size();k++){
+                pos pos1={i,k};
+                if (fueJugada(pos1,j) && t[i][k]==true){
+                    result=false;
+                }
+            }
+        }
+    }
+    return result;
 }
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/

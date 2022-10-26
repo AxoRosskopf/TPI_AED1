@@ -9,12 +9,30 @@
 
 #include "definiciones.h"
 
+//Ejercicio 1
 bool tableroValido(tablero& tablero);
 bool tamanioDeTableroValido(tablero& tablero);
 bool cantidadDeMinasValida(tablero& tablero);
 bool posicionValida(pos p, int n);
 int numMinasAdyacentes(tablero& t, pos p);
 bool esAdyacenteValida(pos p, int i, int j, tablero& t);
+
+//Ejercicio 2
+bool hayMinaEnPosicion(pos p, tablero& t);
+int minasPisadas(jugadas& j ,tablero& t);
+bool jugadasValidas(jugadas& j , tablero& t);
+bool juegoValido(tablero& t,jugadas& j);
+bool jugadasNoRepetidas (jugadas& j);
+bool esBanderita(pos p, banderitas& b);
+bool fueJugada(pos p, jugadas& j);
+bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t);
+
+
+
+
+
+
+
 
 
 
