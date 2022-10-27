@@ -65,5 +65,14 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
-    // ...
+    bool hay=false;
+    if (juegoValido(t,j) && banderitasValidas(b,t,j)){
+        if (hayPosicionSugerible(j,b,t)){
+            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+                hay=true;
+            }
+        }
+
+    }
+    return hay;
 }

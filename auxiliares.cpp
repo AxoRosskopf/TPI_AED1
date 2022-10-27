@@ -145,12 +145,64 @@ bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero&
 
 
 
+//FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
+bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t){
+    bool result=false;
+    for (int i=0;i<t.size();i++){
+        for (int k=0; k<t.size(); k++){
+            pos p (i,k);
+            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+                result=true;
+            }
+        }
+    }
+    return result;
+}
 
+bool esAdyacenteA121(pos p, jugadas& j){
+    bool result=false;
+    pos pos1 (p.first-1,p.second);
+    pos pos2 (p.first+1,p.second);
+    pos pos3 (p.first,p.second-1);
+    pos pos4 (p.first,p.second+1);
 
+    if (es121Horizontal(pos1,j) || es121Horizontal(pos2,j) || es121Vertical(pos3,j) || es121Vertical(pos4,j)){
+        result=true;
+    }
+    return result;
+}
 
+bool es121Horizontal(pos p, jugadas& j){
+    bool result= false;
+    int aux=0;
+    for (int i=0;i<j.size();i++){
+        if ((j[i].first.first==p.first && j[i].first.second==p.second-1 && j[i].second==1) ||
+            (j[i].first.first==p.first && j[i].first.second==p.second && j[i].second==2) ||
+            (j[i].first.first==p.first && j[i].first.second==p.second+1 && j[i].second==1)){
+                aux++;
+        }
+    }
+    if (aux==3){
+        result=true;
+    }
+    return result;
+}
 
-
-
+bool es121Vertical(pos p, jugadas& j){
+    bool result= false;
+    int aux=0;
+    for (int i=0;i<j.size();i++){
+        if ((j[i].first.first==p.first-1 && j[i].first.second==p.second && j[i].second==1) ||
+            (j[i].first.first==p.first && j[i].first.second==p.second && j[i].second==2) ||
+            (j[i].first.first==p.first+1 && j[i].first.second==p.second && j[i].second==1)){
+            aux++;
+        }
+    }
+    if (aux==3){
+        result=true;
+    }
+    return result;
+}
 
 
 

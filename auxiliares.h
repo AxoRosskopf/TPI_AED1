@@ -28,6 +28,12 @@ bool fueJugada(pos p, jugadas& j);
 bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t);
 
 
+//Ejecicio 6
+bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t);
+bool esAdyacenteA121(pos p, jugadas& j);
+bool es121Horizontal(pos p, jugadas& j);
+bool es121Vertical(pos p, jugadas& j);
+
 
 
 
