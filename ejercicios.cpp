@@ -15,12 +15,10 @@ using namespace std;
 /******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
 
 int minasAdyacentes(tablero& t, pos p) {
-    int result=0;
-    if (tableroValido(t) && posicionValida(p,t.size())){
-        result=numMinasAdyacentes(t,p);
-    }
+    int result = numMinasAdyacentes(t, p);
     return result;
 }
+
 
 /******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
 
@@ -64,7 +62,7 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
-bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+/*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
     bool hay=false;
     if (juegoValido(t,j) && banderitasValidas(b,t,j)){
         if (hayPosicionSugerible(j,b,t)){
@@ -76,3 +74,4 @@ bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
     }
     return hay;
 }
+*/

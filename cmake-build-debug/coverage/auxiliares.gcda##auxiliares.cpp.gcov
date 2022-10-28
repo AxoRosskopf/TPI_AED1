@@ -1,0 +1,656 @@
+        -:    0:Source:/home/clinux01/Escritorio/TPI/TPI_AED1/auxiliares.cpp
+        -:    0:Graph:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcno
+        -:    0:Data:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones auxiliares
+        -:    3:// que ustedes necesiten implementar. Tienen que coincidir con las 
+        -:    4:// declaraciones de auxiliares.h
+        -:    5://
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+        -:   15:
+        -:   16:// FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 1
+        -:   17:
+function _Z13tableroValidoRSt6vectorIS_IbSaIbEESaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   18:bool tableroValido(tablero& tablero){
+    #####:   19:    if (tamanioDeTableroValido(tablero) & cantidadDeMinasValida(tablero)){
+    %%%%%:   19-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   20:        return true;
+    %%%%%:   20-block  0
+    #####:   21:    }else return false;
+    %%%%%:   21-block  0
+        -:   22:}
+        -:   23:
+function _Z22tamanioDeTableroValidoRSt6vectorIS_IbSaIbEESaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   24:bool tamanioDeTableroValido(tablero& tablero){
+    #####:   25:    if (tablero.size()>0){
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   26:        bool tamanioDeFila=true;
+    #####:   27:        int i=0;
+    %%%%%:   27-block  0
+    #####:   28:        while (i<tablero.size() && tamanioDeFila== true){
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   28-block  1
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   28-block  2
+    %%%%%:   28-block  3
+    %%%%%:   28-block  4
+branch  5 never executed
+branch  6 never executed
+    #####:   29:            if (tablero.size() != tablero[i].size()){
+    %%%%%:   29-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   30:                tamanioDeFila= false;
+    %%%%%:   30-block  0
+        -:   31:            }
+    #####:   32:            i++;
+    %%%%%:   32-block  0
+        -:   33:        }
+        -:   34:
+        -:   35:    }
+    #####:   36:}
+        -:   37:
+function _Z21cantidadDeMinasValidaRSt6vectorIS_IbSaIbEESaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   38:bool cantidadDeMinasValida(tablero& tablero){
+    #####:   39:    int cantidadDeMinas=0;
+    #####:   40:    for (int i=0; i<tablero.size(); i++){
+    %%%%%:   40-block  0
+    %%%%%:   40-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   40-block  2
+    #####:   41:        for (int j=0;j<tablero[i].size();j++){
+    %%%%%:   41-block  0
+    %%%%%:   41-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   41-block  2
+    #####:   42:            if (tablero[i][j]== true){
+    %%%%%:   42-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   43:                cantidadDeMinas++;
+    %%%%%:   43-block  0
+        -:   44:            }
+        -:   45:        }
+        -:   46:    }
+    #####:   47:    if (cantidadDeMinas<(tablero.size()*tablero.size())){
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   48:        return true;
+    %%%%%:   48-block  0
+    #####:   49:    }else return false;
+    %%%%%:   49-block  0
+        -:   50:}
+        -:   51:
+function _Z14posicionValidaSt4pairIiiEi called 0 returned 0% blocks executed 0%
+    #####:   52:bool posicionValida(pos p, int n){
+    #####:   53:    bool result=false;
+    #####:   54:    if (p.first<n && p.second<n){
+    %%%%%:   54-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   54-block  1
+branch  2 never executed
+branch  3 never executed
+    #####:   55:        result=true;
+    %%%%%:   55-block  0
+        -:   56:    }
+    #####:   57:    return result;
+    %%%%%:   57-block  0
+        -:   58:}
+        -:   59:
+function _Z18numMinasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 3 returned 100% blocks executed 100%
+        3:   60:int numMinasAdyacentes(tablero& t, pos p){
+        3:   61:    int result=0;
+       12:   62:    for (int i=-1; i<=1;i++){
+        3:   62-block  0
+       12:   62-block  1
+branch  0 taken 9 (fallthrough)
+branch  1 taken 3
+        9:   62-block  2
+       36:   63:        for (int j=-1;j<=1;j++){
+        9:   63-block  0
+       36:   63-block  1
+branch  0 taken 27 (fallthrough)
+branch  1 taken 9
+       27:   63-block  2
+       27:   64:            if (esAdyacenteValida(p,i,j,t) && t[p.first+i][p.second+j]==true){
+       27:   64-block  0
+call    0 returned 27
+branch  1 taken 14 (fallthrough)
+branch  2 taken 13
+       14:   64-block  1
+call    3 returned 14
+call    4 returned 14
+call    5 returned 14
+branch  6 taken 4 (fallthrough)
+branch  7 taken 10
+        4:   64-block  2
+       23:   64-block  3
+       27:   64-block  4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 23
+        4:   65:                result++;
+        4:   65-block  0
+        -:   66:            }
+        -:   67:        }
+        -:   68:    }
+        3:   69:    return result;
+        3:   69-block  0
+        -:   70:}
+        -:   71:
+function _Z17esAdyacenteValidaSt4pairIiiEiiRSt6vectorIS1_IbSaIbEESaIS3_EE called 27 returned 100% blocks executed 100%
+       27:   72:bool esAdyacenteValida(pos p, int i, int j, tablero& t){
+       27:   73:    if (p.first+i<t.size() && p.second+j<t.size() && (i!=0 || j!=0)){
+       27:   73-block  0
+call    0 returned 27
+branch  1 taken 21 (fallthrough)
+branch  2 taken 6
+       21:   73-block  1
+call    3 returned 21
+branch  4 taken 17 (fallthrough)
+branch  5 taken 4
+       17:   73-block  2
+branch  6 taken 7 (fallthrough)
+branch  7 taken 10
+        7:   73-block  3
+branch  8 taken 4 (fallthrough)
+branch  9 taken 3
+       14:   73-block  4
+       13:   73-block  5
+       27:   73-block  6
+branch 10 taken 14 (fallthrough)
+branch 11 taken 13
+       14:   74:        return true;
+       14:   74-block  0
+       13:   75:    }else return false;
+       13:   75-block  0
+        -:   76:}
+        -:   77:
+        -:   78:
+        -:   79:// FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 2
+        -:   80:
+function _Z17hayMinaEnPosicionSt4pairIiiERSt6vectorIS1_IbSaIbEESaIS3_EE called 0 returned 0% blocks executed 0%
+    #####:   81:bool hayMinaEnPosicion(pos p, tablero& t){
+    #####:   82:    if (t[p.first][p.second] == cMINA){
+    %%%%%:   82-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   83:        return true;
+    %%%%%:   83-block  0
+    #####:   84:    }else return false;
+    %%%%%:   84-block  0
+        -:   85:}
+        -:   86:
+function _Z12minasPisadasRSt6vectorISt4pairIS0_IiiEiESaIS2_EERS_IS_IbSaIbEESaIS7_EE called 0 returned 0% blocks executed 0%
+    #####:   87:int minasPisadas(jugadas& j ,tablero& t){
+    #####:   88:    int minas = 0;
+    #####:   89:    for(int i = 0; i<j.size(); i++){
+    %%%%%:   89-block  0
+    %%%%%:   89-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   89-block  2
+    #####:   90:        if (hayMinaEnPosicion(j[i].first, t)){
+    %%%%%:   90-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   91:            minas++;
+    %%%%%:   91-block  0
+        -:   92:        }
+        -:   93:    }
+    #####:   94:    return minas;
+    %%%%%:   94-block  0
+        -:   95:}
+        -:   96:
+function _Z14jugadasValidasRSt6vectorISt4pairIS0_IiiEiESaIS2_EERS_IS_IbSaIbEESaIS7_EE called 0 returned 0% blocks executed 0%
+    #####:   97:bool jugadasValidas(jugadas& j , tablero& t){
+    #####:   98:    for (int i =0; i<j.size();i++){
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:        if ( posicionValida(j[i].first,t.size())
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  100:        && (numMinasAdyacentes(t,j[i].first) == j[i].second)){
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  100-block  0
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  100-block  1
+    %%%%%:  100-block  2
+    %%%%%:  100-block  3
+branch  7 never executed
+branch  8 never executed
+    #####:  101:            return true;
+    %%%%%:  101-block  0
+    #####:  102:        } else return false;
+    %%%%%:  102-block  0
+        -:  103:    }
+    #####:  104:}
+    %%%%%:  104-block  0
+        -:  105:
+function _Z11juegoValidoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 0 returned 0% blocks executed 0%
+    #####:  106:bool juegoValido(tablero& t,jugadas& j){
+    #####:  107:    if (tableroValido(t)&& jugadasValidas(j,t)
+    %%%%%:  107-block  0
+call    0 never executed
+    %%%%%:  107-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  108:    && (minasPisadas(j,t) <= 1)){
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  108-block  0
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  108-block  1
+    %%%%%:  108-block  2
+    %%%%%:  108-block  3
+branch  5 never executed
+branch  6 never executed
+    #####:  109:        return true;
+    %%%%%:  109-block  0
+    #####:  110:    } else return false;
+    %%%%%:  110-block  0
+        -:  111:}
+        -:  112:
+function _Z18jugadasNoRepetidasRSt6vectorISt4pairIS0_IiiEiESaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:  113:bool jugadasNoRepetidas (jugadas& j){
+    #####:  114: for(int i=0 ; i < j.size();i++){
+    %%%%%:  114-block  0
+    %%%%%:  114-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  114-block  2
+    #####:  115:     for (int k = 0 ; k < j.size(); k++){
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  116:        if(j[i].first != j[k].first && (i != k)){
+    %%%%%:  116-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  116-block  1
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  116-block  2
+    %%%%%:  116-block  3
+    %%%%%:  116-block  4
+branch  7 never executed
+branch  8 never executed
+    #####:  117:            return true;
+    %%%%%:  117-block  0
+    #####:  118:        } else return false;
+    %%%%%:  118-block  0
+        -:  119:     }
+        -:  120: }
+    #####:  121:}
+    %%%%%:  121-block  0
+        -:  122:
+function _Z11esBanderitaSt4pairIiiERSt6vectorIS0_SaIS0_EE called 0 returned 0% blocks executed 0%
+    #####:  123:bool esBanderita(pos p, banderitas& b){
+    #####:  124:    for(int i = 0; i<b.size(); i++){
+    %%%%%:  124-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  125:        if ( p == b[i]){
+    %%%%%:  125-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  126:            return true;
+    %%%%%:  126-block  0
+    #####:  127:        }else return false;
+    %%%%%:  127-block  0
+        -:  128:    }
+    #####:  129:}
+    %%%%%:  129-block  0
+        -:  130:
+function _Z9fueJugadaSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:  131:bool fueJugada(pos p, jugadas& j){
+    #####:  132:    for(int i = 0; i<j.size(); i++){
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:        if (p == j[i].first){
+    %%%%%:  133-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  134:            return true;
+    %%%%%:  134-block  0
+    #####:  135:        } else return false;
+    %%%%%:  135-block  0
+        -:  136:    }
+    #####:  137:}
+    %%%%%:  137-block  0
+        -:  138:
+function _Z31esPosicionSinJugarYSinBanderitaSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EERS1_IS0_SaIS0_EERS1_IS1_IbSaIbEESaISA_EE called 0 returned 0% blocks executed 0%
+    #####:  139:bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t){
+    #####:  140:    if(posicionValida(p,t.size())
+    %%%%%:  140-block  0
+call    0 never executed
+call    1 never executed
+    #####:  141:    && (!fueJugada(p,j)&& !esBanderita(p,b))){
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  141-block  0
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  141-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  141-block  2
+    %%%%%:  141-block  3
+    %%%%%:  141-block  4
+branch  8 never executed
+branch  9 never executed
+    #####:  142:        return true;
+    %%%%%:  142-block  0
+    #####:  143:    }else return false;
+    %%%%%:  143-block  0
+        -:  144:}
+        -:  145:
+        -:  146:
+        -:  147:
+        -:  148://FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
+function _Z20hayPosicionSugeribleRSt6vectorISt4pairIS0_IiiEiESaIS2_EERS_IS1_SaIS1_EERS_IS_IbSaIbEESaISA_EE called 0 returned 0% blocks executed 0%
+    #####:  149:bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t){
+    #####:  150:    bool result=false;
+    #####:  151:    for (int i=0;i<t.size();i++){
+    %%%%%:  151-block  0
+    %%%%%:  151-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  151-block  2
+    #####:  152:        for (int k=0; k<t.size(); k++){
+    %%%%%:  152-block  0
+    %%%%%:  152-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  152-block  2
+    #####:  153:            pos p (i,k);
+    %%%%%:  153-block  0
+call    0 never executed
+    #####:  154:            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  154-block  0
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  154-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  154-block  2
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  154-block  3
+    %%%%%:  154-block  4
+    %%%%%:  154-block  5
+branch 10 never executed
+branch 11 never executed
+    #####:  155:                result=true;
+    %%%%%:  155-block  0
+        -:  156:            }
+        -:  157:        }
+        -:  158:    }
+    #####:  159:    return result;
+    %%%%%:  159-block  0
+    %%%%%:  159-block  1
+        -:  160:}
+        -:  161:
+function _Z15esAdyacenteA121St4pairIiiERSt6vectorIS_IS0_iESaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:  162:bool esAdyacenteA121(pos p, jugadas& j){
+    #####:  163:    bool result=false;
+    #####:  164:    pos pos1 (p.first-1,p.second);
+    %%%%%:  164-block  0
+call    0 never executed
+    #####:  165:    pos pos2 (p.first+1,p.second);
+call    0 never executed
+    #####:  166:    pos pos3 (p.first,p.second-1);
+call    0 never executed
+    #####:  167:    pos pos4 (p.first,p.second+1);
+call    0 never executed
+        -:  168:
+    #####:  169:    if (es121Horizontal(pos1,j) || es121Horizontal(pos2,j) || es121Vertical(pos3,j) || es121Vertical(pos4,j)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  169-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  169-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  169-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  169-block  3
+    %%%%%:  169-block  4
+    %%%%%:  169-block  5
+branch 12 never executed
+branch 13 never executed
+    #####:  170:        result=true;
+    %%%%%:  170-block  0
+        -:  171:    }
+    #####:  172:    return result;
+    %%%%%:  172-block  0
+        -:  173:}
+        -:  174:
+function _Z15es121HorizontalSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:  175:bool es121Horizontal(pos p, jugadas& j){
+    #####:  176:    bool result= false;
+    #####:  177:    int aux=0;
+    #####:  178:    for (int i=0;i<j.size();i++){
+    %%%%%:  178-block  0
+    %%%%%:  178-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  178-block  2
+    #####:  179:        if ((j[i].first.first==p.first && j[i].first.second==p.second-1 && j[i].second==1) ||
+    %%%%%:  179-block  0
+call    0 never executed
+    %%%%%:  179-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  179-block  2
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  180:            (j[i].first.first==p.first && j[i].first.second==p.second && j[i].second==2) ||
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  180-block  0
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  180-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  180-block  2
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  180-block  3
+    %%%%%:  180-block  4
+    %%%%%:  180-block  5
+branch 11 never executed
+branch 12 never executed
+    #####:  181:            (j[i].first.first==p.first && j[i].first.second==p.second+1 && j[i].second==1)){
+    %%%%%:  181-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  181-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  181-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  182:                aux++;
+    %%%%%:  182-block  0
+        -:  183:        }
+        -:  184:    }
+    #####:  185:    if (aux==3){
+    %%%%%:  185-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  186:        result=true;
+    %%%%%:  186-block  0
+        -:  187:    }
+    #####:  188:    return result;
+    %%%%%:  188-block  0
+        -:  189:}
+        -:  190:
+function _Z13es121VerticalSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:  191:bool es121Vertical(pos p, jugadas& j){
+    #####:  192:    bool result= false;
+    #####:  193:    int aux=0;
+    #####:  194:    for (int i=0;i<j.size();i++){
+    %%%%%:  194-block  0
+    %%%%%:  194-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  194-block  2
+    #####:  195:        if ((j[i].first.first==p.first-1 && j[i].first.second==p.second && j[i].second==1) ||
+    %%%%%:  195-block  0
+call    0 never executed
+    %%%%%:  195-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  195-block  2
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  196:            (j[i].first.first==p.first && j[i].first.second==p.second && j[i].second==2) ||
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  196-block  0
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  196-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  196-block  2
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  196-block  3
+    %%%%%:  196-block  4
+    %%%%%:  196-block  5
+branch 11 never executed
+branch 12 never executed
+    #####:  197:            (j[i].first.first==p.first+1 && j[i].first.second==p.second && j[i].second==1)){
+    %%%%%:  197-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  197-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  197-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  198:            aux++;
+    %%%%%:  198-block  0
+        -:  199:        }
+        -:  200:    }
+    #####:  201:    if (aux==3){
+    %%%%%:  201-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  202:        result=true;
+    %%%%%:  202-block  0
+        -:  203:    }
+    #####:  204:    return result;
+    %%%%%:  204-block  0
+        -:  205:}
+        -:  206:
+        -:  207:
+        -:  208:
+        -:  209:
+        -:  210:
+        -:  211:
+        -:  212:
+        -:  213:
+        -:  214:
+        -:  215:
+        -:  216:
