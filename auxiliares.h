@@ -26,7 +26,8 @@ bool jugadasNoRepetidas (jugadas& j);
 bool esBanderita(pos p, banderitas& b);
 bool fueJugada(pos p, jugadas& j);
 bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t);
-
+void sacaBanderita(pos p,banderitas& b);
+void plantaBanderita(pos p,banderitas& b);
 
 //Ejecicio 6
 bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t);

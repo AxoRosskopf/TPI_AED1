@@ -120,11 +120,13 @@ bool jugadasNoRepetidas (jugadas& j){
 }
 
 bool esBanderita(pos p, banderitas& b){
+    bool result=false;
     for(int i = 0; i<b.size(); i++){
         if ( p == b[i]){
-            return true;
-        }else return false;
+            result=true;
+        };
     }
+    return result;
 }
 
 bool fueJugada(pos p, jugadas& j){
@@ -142,6 +144,20 @@ bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero&
     && (!fueJugada(p,j)&& !esBanderita(p,b))){
         return true;
     }else return false;
+}
+
+void sacaBanderita(pos p,banderitas& b){
+    banderitas aux={};
+    for (int i=0; i<b.size();i++){
+        if (p!=b[i]){
+            aux.push_back(b[i]);
+        }
+    }
+    b=aux;
+}
+
+void plantaBanderita(pos p,banderitas& b){
+    b.push_back(p);
 }
 
 

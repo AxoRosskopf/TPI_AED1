@@ -23,8 +23,9 @@ int minasAdyacentes(tablero& t, pos p) {
 /******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
 
 void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
-
-    
+    if (esBanderita(p,b)){
+        sacaBanderita(p,b);
+    }else plantaBanderita(p, b);
 }
 
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
@@ -58,7 +59,7 @@ bool gano(tablero& t, jugadas& j) {
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
-    // ...
+
 }
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
