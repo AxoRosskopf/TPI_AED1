@@ -1,0 +1,139 @@
+        -:    0:Source:/home/clinux01/Escritorio/TPI/TPI_AED1/ejercicios.cpp
+        -:    0:Graph:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno
+        -:    0:Data:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones que implementan los ejercicios
+        -:    3://
+        -:    4:
+        -:    5:#include <stdio.h>
+        -:    6:#include <iostream>
+        -:    7:
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+        -:   15:/******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
+        -:   16:
+function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 3 returned 100% blocks executed 100%
+        3:   17:int minasAdyacentes(tablero& t, pos p) {
+        3:   18:    int result = numMinasAdyacentes(t, p);
+        3:   18-block  0
+call    0 returned 3
+        3:   19:    return result;
+        -:   20:}
+        -:   21:
+        -:   22:
+        -:   23:/******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
+        -:   24:
+function _Z16cambiarBanderitaRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EES6_RS_IS6_SaIS6_EE called 2 returned 100% blocks executed 100%
+        2:   25:void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
+        2:   26:    if (esBanderita(p,b)){
+        2:   26-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   27:        sacaBanderita(p,b);
+        1:   27-block  0
+call    0 returned 1
+        1:   28:    }else plantaBanderita(p, b);
+        1:   28-block  0
+call    0 returned 1
+        2:   29:}
+        -:   30:
+        -:   31:/******++++**************************** EJERCICIO perdio ***********+++***********************/
+function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 3 returned 100% blocks executed 100%
+        3:   32:bool perdio(tablero& t, jugadas& j) {
+        3:   33:    bool result=false;
+       14:   34:    for (int i=0; i<j.size();i++){
+        3:   34-block  0
+       14:   34-block  1
+call    0 returned 14
+branch  1 taken 11 (fallthrough)
+branch  2 taken 3
+       11:   34-block  2
+       11:   35:        if (hayMinaEnPosicion(j[i].first,t)){
+       11:   35-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 1 (fallthrough)
+branch  3 taken 10
+        1:   36:            result=true;
+        1:   36-block  0
+        -:   37:        }
+        -:   38:    }
+        -:   39:
+        3:   40:    return result;
+        3:   40-block  0
+        -:   41:}
+        -:   42:
+        -:   43:/******++++**************************** EJERCICIO gano ***********+++***********************/
+function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 4 returned 100% blocks executed 90%
+        4:   44:bool gano(tablero& t, jugadas& j) {
+        4:   45:    bool result= true;
+       24:   46:    for (int i=0;i<t.size();i++){
+        4:   46-block  0
+       24:   46-block  1
+call    0 returned 24
+branch  1 taken 20 (fallthrough)
+branch  2 taken 4
+       20:   46-block  2
+      120:   47:        for (int k=0;k<t.size();k++){
+       20:   47-block  0
+      120:   47-block  1
+call    0 returned 120
+branch  1 taken 100 (fallthrough)
+branch  2 taken 20
+      100:   47-block  2
+      100:   48:            pos pos1={i,k};
+      100:   48-block  0
+call    0 returned 100
+      100:   49:            if (t[i][k]==cVACIA){
+call    0 returned 100
+call    1 returned 100
+call    2 returned 100
+branch  3 taken 76 (fallthrough)
+branch  4 taken 24
+       76:   50:                if (!fueJugada(pos1, j)) {
+       76:   50-block  0
+call    0 returned 76
+branch  1 taken 76 (fallthrough)
+branch  2 taken 0 (throw)
+       76:   50-block  1
+branch  3 taken 39 (fallthrough)
+branch  4 taken 37
+       39:   51:                    result = false;
+       39:   51-block  0
+        -:   52:                }
+        -:   53:            }
+        -:   54:        }
+        -:   55:    }
+        -:   56:
+        4:   57:    return result;
+        4:   57-block  0
+        4:   57-block  1
+        -:   58:}
+        -:   59:
+        -:   60:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+function _Z9jugarPlusRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EES6_RS_IS5_IS6_iESaISA_EE called 0 returned 0% blocks executed 0%
+    #####:   61:void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
+        -:   62:    // ...
+    #####:   63:}
+        -:   64:
+        -:   65:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+        -:   66:/*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+        -:   67:    bool hay=false;
+        -:   68:    if (juegoValido(t,j) && banderitasValidas(b,t,j)){
+        -:   69:        if (hayPosicionSugerible(j,b,t)){
+        -:   70:            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+        -:   71:                hay=true;
+        -:   72:            }
+        -:   73:        }
+        -:   74:
+        -:   75:    }
+        -:   76:    return hay;
+        -:   77:}
+        -:   78:*/
