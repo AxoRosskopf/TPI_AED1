@@ -59,8 +59,21 @@ bool gano(tablero& t, jugadas& j) {
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
-
+    incluirJugadaActual(p, j, t);
+    if (t[p.first][p.second] == cVACIA && minasAdyacentes(t,p)==0){
+        for (int i=0; i<t.size();i++){
+            for (int k=0;k<t.size();k++){
+                pos pos1 (i,k);
+                if (!fueJugada(pos1,j) && !esBanderita(pos1,b)){
+                    if (esParteDelCaminoLibre(p,pos1,t)){
+                        jugarPlus(t,b,pos1,j);
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
 /*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {

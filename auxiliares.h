@@ -29,6 +29,12 @@ bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero&
 void sacaBanderita(pos p,banderitas& b);
 void plantaBanderita(pos p,banderitas& b);
 
+//Ejercicio 5
+void incluirJugadaActual(pos p,jugadas& j, tablero& t);
+bool esParteDelCaminoLibre(pos partida, pos final, tablero& t);
+bool mismosElementos(jugadas& j, jugadas& control);
+
+
 //Ejecicio 6
 bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t);
 bool esAdyacenteA121(pos p, jugadas& j);

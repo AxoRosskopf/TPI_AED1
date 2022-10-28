@@ -160,6 +160,39 @@ void plantaBanderita(pos p,banderitas& b){
     b.push_back(p);
 }
 
+//FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 5
+void incluirJugadaActual(pos pos1,jugadas & j, tablero& t){
+    jugada jugada1 (pos1, minasAdyacentes(t,pos1));
+    j.push_back(jugada1);
+}
+
+bool esParteDelCaminoLibre(pos partida, pos final, tablero& t) {
+    bool result=false;
+    if (esAdyacenteValida(partida,final.first, final.second,t)){
+        if (minasAdyacentes(t,final)==0){
+            result=true;
+        }
+    }
+    return result;
+}
+
+bool mismosElementos(jugadas& j, jugadas& control){
+    bool result=true;
+    if (j.size()==control.size()){
+        for (int i=0; i<j.size();i++){
+            int aux=0;
+            for (int k=0;k<j.size();k++){
+                if (j[i]==control[k]){
+                    aux++;
+                }
+            }
+            if (aux!=1){
+                result=false;
+            }
+        }
+    }
+    return result;
+}
 
 
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
