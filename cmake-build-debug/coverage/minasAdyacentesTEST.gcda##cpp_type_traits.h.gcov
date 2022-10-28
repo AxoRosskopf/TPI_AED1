@@ -429,26 +429,26 @@
         -:  425:  // remove the move_iterator wrapper.
         -:  426:  template<typename _Iterator>
         -:  427:    inline _Iterator
-       30:  428:    __miter_base(_Iterator __it)
-       30:  429:    { return __it; }
+       90:  428:    __miter_base(_Iterator __it)
+       90:  429:    { return __it; }
 ------------------
 _ZSt12__miter_baseISt19_Bit_const_iteratorET_S1_:
-function _ZSt12__miter_baseISt19_Bit_const_iteratorET_S1_ called 10 returned 100% blocks executed 100%
-       10:  428:    __miter_base(_Iterator __it)
-       10:  429:    { return __it; }
-       10:  429-block  0
+function _ZSt12__miter_baseISt19_Bit_const_iteratorET_S1_ called 30 returned 100% blocks executed 100%
+       30:  428:    __miter_base(_Iterator __it)
+       30:  429:    { return __it; }
+       30:  429-block  0
 ------------------
 _ZSt12__miter_baseIPmET_S1_:
-function _ZSt12__miter_baseIPmET_S1_ called 10 returned 100% blocks executed 100%
-       10:  428:    __miter_base(_Iterator __it)
-       10:  429:    { return __it; }
-       10:  429-block  0
+function _ZSt12__miter_baseIPmET_S1_ called 30 returned 100% blocks executed 100%
+       30:  428:    __miter_base(_Iterator __it)
+       30:  429:    { return __it; }
+       30:  429-block  0
 ------------------
 _ZSt12__miter_baseIPKbET_S2_:
-function _ZSt12__miter_baseIPKbET_S2_ called 10 returned 100% blocks executed 100%
-       10:  428:    __miter_base(_Iterator __it)
-       10:  429:    { return __it; }
-       10:  429-block  0
+function _ZSt12__miter_baseIPKbET_S2_ called 30 returned 100% blocks executed 100%
+       30:  428:    __miter_base(_Iterator __it)
+       30:  429:    { return __it; }
+       30:  429-block  0
 ------------------
         -:  430:
         -:  431:_GLIBCXX_END_NAMESPACE_VERSION

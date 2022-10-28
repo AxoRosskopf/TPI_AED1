@@ -94,20 +94,20 @@ function _ZNKSt14_Bit_referencecvbEv called 0 returned 0% blocks executed 0%
     %%%%%:   87-block  0
         -:   88:
         -:   89:    _Bit_reference&
-function _ZNSt14_Bit_referenceaSEb called 50 returned 100% blocks executed 100%
-       50:   90:    operator=(bool __x) _GLIBCXX_NOEXCEPT
+function _ZNSt14_Bit_referenceaSEb called 150 returned 100% blocks executed 100%
+      150:   90:    operator=(bool __x) _GLIBCXX_NOEXCEPT
         -:   91:    {
-       50:   92:      if (__x)
-       50:   92-block  0
-branch  0 taken 12 (fallthrough)
-branch  1 taken 38
-       12:   93:	*_M_p |= _M_mask;
-       12:   93-block  0
+      150:   92:      if (__x)
+      150:   92-block  0
+branch  0 taken 36 (fallthrough)
+branch  1 taken 114
+       36:   93:	*_M_p |= _M_mask;
+       36:   93-block  0
         -:   94:      else
-       38:   95:	*_M_p &= ~_M_mask;
-       38:   95-block  0
-       50:   96:      return *this;
-       50:   96-block  0
+      114:   95:	*_M_p &= ~_M_mask;
+      114:   95-block  0
+      150:   96:      return *this;
+      150:   96-block  0
         -:   97:    }
         -:   98:
         -:   99:    _Bit_reference&
@@ -164,19 +164,19 @@ function _ZNSt18_Bit_iterator_baseC2EPmj called 0 returned 0% blocks executed 0%
     #####:  149:    : _M_p(__x), _M_offset(__y) { }
         -:  150:
         -:  151:    void
-function _ZNSt18_Bit_iterator_base10_M_bump_upEv called 75 returned 100% blocks executed 67%
-       75:  152:    _M_bump_up()
+function _ZNSt18_Bit_iterator_base10_M_bump_upEv called 225 returned 100% blocks executed 67%
+      225:  152:    _M_bump_up()
         -:  153:    {
-       75:  154:      if (_M_offset++ == int(_S_word_bit) - 1)
-       75:  154-block  0
+      225:  154:      if (_M_offset++ == int(_S_word_bit) - 1)
+      225:  154-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 75
+branch  1 taken 225
         -:  155:	{
     #####:  156:	  _M_offset = 0;
     #####:  157:	  ++_M_p;
     %%%%%:  157-block  0
         -:  158:	}
-       75:  159:    }
+      225:  159:    }
         -:  160:
         -:  161:    void
         -:  162:    _M_bump_down()
@@ -189,23 +189,23 @@ branch  1 taken 75
         -:  169:    }
         -:  170:
         -:  171:    void
-function _ZNSt18_Bit_iterator_base7_M_incrEl called 10 returned 100% blocks executed 67%
-       10:  172:    _M_incr(ptrdiff_t __i)
+function _ZNSt18_Bit_iterator_base7_M_incrEl called 30 returned 100% blocks executed 67%
+       30:  172:    _M_incr(ptrdiff_t __i)
         -:  173:    {
-       10:  174:      difference_type __n = __i + _M_offset;
-       10:  175:      _M_p += __n / int(_S_word_bit);
-       10:  176:      __n = __n % int(_S_word_bit);
-       10:  177:      if (__n < 0)
-       10:  177-block  0
+       30:  174:      difference_type __n = __i + _M_offset;
+       30:  175:      _M_p += __n / int(_S_word_bit);
+       30:  176:      __n = __n % int(_S_word_bit);
+       30:  177:      if (__n < 0)
+       30:  177-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 10
+branch  1 taken 30
         -:  178:	{
     #####:  179:	  __n += int(_S_word_bit);
     #####:  180:	  --_M_p;
     %%%%%:  180-block  0
         -:  181:	}
-       10:  182:      _M_offset = static_cast<unsigned int>(__n);
-       10:  183:    }
+       30:  182:      _M_offset = static_cast<unsigned int>(__n);
+       30:  183:    }
         -:  184:
         -:  185:    bool
         -:  186:    operator==(const _Bit_iterator_base& __i) const
@@ -250,10 +250,10 @@ function _ZStmiRKSt18_Bit_iterator_baseS1_ called 0 returned 0% blocks executed 
         -:  223:    typedef _Bit_reference* pointer;
         -:  224:    typedef _Bit_iterator   iterator;
         -:  225:
-function _ZNSt13_Bit_iteratorC2Ev called 30 returned 100% blocks executed 100%
-       30:  226:    _Bit_iterator() : _Bit_iterator_base(0, 0) { }
-       30:  226-block  0
-call    0 returned 30
+function _ZNSt13_Bit_iteratorC2Ev called 90 returned 100% blocks executed 100%
+       90:  226:    _Bit_iterator() : _Bit_iterator_base(0, 0) { }
+       90:  226-block  0
+call    0 returned 90
         -:  227:
 function _ZNSt13_Bit_iteratorC2EPmj called 0 returned 0% blocks executed 0%
     #####:  228:    _Bit_iterator(_Bit_type * __x, unsigned int __y)
@@ -273,13 +273,13 @@ function _ZNKSt13_Bit_iteratordeEv called 0 returned 0% blocks executed 0%
 call    0 never executed
         -:  238:
         -:  239:    iterator&
-function _ZNSt13_Bit_iteratorppEv called 50 returned 100% blocks executed 100%
-       50:  240:    operator++()
+function _ZNSt13_Bit_iteratorppEv called 150 returned 100% blocks executed 100%
+      150:  240:    operator++()
         -:  241:    {
-       50:  242:      _M_bump_up();
-       50:  242-block  0
-call    0 returned 50
-       50:  243:      return *this;
+      150:  242:      _M_bump_up();
+      150:  242-block  0
+call    0 returned 150
+      150:  243:      return *this;
         -:  244:    }
         -:  245:
         -:  246:    iterator
@@ -306,13 +306,13 @@ call    0 returned 50
         -:  267:    }
         -:  268:
         -:  269:    iterator&
-function _ZNSt13_Bit_iteratorpLEl called 10 returned 100% blocks executed 100%
-       10:  270:    operator+=(difference_type __i)
+function _ZNSt13_Bit_iteratorpLEl called 30 returned 100% blocks executed 100%
+       30:  270:    operator+=(difference_type __i)
         -:  271:    {
-       10:  272:      _M_incr(__i);
-       10:  272-block  0
-call    0 returned 10
-       10:  273:      return *this;
+       30:  272:      _M_incr(__i);
+       30:  272-block  0
+call    0 returned 30
+       30:  273:      return *this;
         -:  274:    }
         -:  275:
         -:  276:    iterator&
@@ -323,13 +323,13 @@ call    0 returned 10
         -:  281:    }
         -:  282:
         -:  283:    iterator
-function _ZNKSt13_Bit_iteratorplEl called 10 returned 100% blocks executed 100%
-       10:  284:    operator+(difference_type __i) const
+function _ZNKSt13_Bit_iteratorplEl called 30 returned 100% blocks executed 100%
+       30:  284:    operator+(difference_type __i) const
         -:  285:    {
-       10:  286:      iterator __tmp = *this;
-       10:  287:      return __tmp += __i;
-       10:  287-block  0
-call    0 returned 10
+       30:  286:      iterator __tmp = *this;
+       30:  287:      return __tmp += __i;
+       30:  287-block  0
+call    0 returned 30
         -:  288:    }
         -:  289:
         -:  290:    iterator
@@ -374,21 +374,21 @@ call    0 never executed
         -:  323:    { return _Bit_iterator(_M_p, _M_offset); }
         -:  324:
         -:  325:    const_reference
-function _ZNKSt19_Bit_const_iteratordeEv called 25 returned 100% blocks executed 100%
-       25:  326:    operator*() const
-       25:  327:    { return _Bit_reference(_M_p, 1UL << _M_offset); }
-       25:  327-block  0
-call    0 returned 25
-call    1 returned 25
+function _ZNKSt19_Bit_const_iteratordeEv called 75 returned 100% blocks executed 100%
+       75:  326:    operator*() const
+       75:  327:    { return _Bit_reference(_M_p, 1UL << _M_offset); }
+       75:  327-block  0
+call    0 returned 75
+call    1 returned 75
         -:  328:
         -:  329:    const_iterator&
-function _ZNSt19_Bit_const_iteratorppEv called 25 returned 100% blocks executed 100%
-       25:  330:    operator++()
+function _ZNSt19_Bit_const_iteratorppEv called 75 returned 100% blocks executed 100%
+       75:  330:    operator++()
         -:  331:    {
-       25:  332:      _M_bump_up();
-       25:  332-block  0
-call    0 returned 25
-       25:  333:      return *this;
+       75:  332:      _M_bump_up();
+       75:  332-block  0
+call    0 returned 75
+       75:  333:      return *this;
         -:  334:    }
         -:  335:
         -:  336:    const_iterator
@@ -499,13 +499,13 @@ call    0 returned 25
         -:  441:	_Bit_iterator 	_M_finish;
         -:  442:	_Bit_pointer 	_M_end_of_storage;
         -:  443:
-function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_dataC2Ev called 10 returned 100% blocks executed 100%
-       10:  444:	_Bvector_impl_data() _GLIBCXX_NOEXCEPT
-       10:  445:	: _M_start(), _M_finish(), _M_end_of_storage()
-       10:  445-block  0
-call    0 returned 10
-call    1 returned 10
-       10:  446:	{ }
+function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_dataC2Ev called 30 returned 100% blocks executed 100%
+       30:  444:	_Bvector_impl_data() _GLIBCXX_NOEXCEPT
+       30:  445:	: _M_start(), _M_finish(), _M_end_of_storage()
+       30:  445-block  0
+call    0 returned 30
+call    1 returned 30
+       30:  446:	{ }
         -:  447:
         -:  448:#if __cplusplus >= 201103L
         -:  449:	_Bvector_impl_data(_Bvector_impl_data&& __x) noexcept
@@ -524,14 +524,14 @@ call    1 returned 10
         -:  462:#endif
         -:  463:
         -:  464:	void
-function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_data8_M_resetEv called 10 returned 100% blocks executed 100%
-       10:  465:	_M_reset() _GLIBCXX_NOEXCEPT
+function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_data8_M_resetEv called 30 returned 100% blocks executed 100%
+       30:  465:	_M_reset() _GLIBCXX_NOEXCEPT
         -:  466:	{
-       10:  467:	  _M_start = _M_finish = _Bit_iterator();
-       10:  467-block  0
-call    0 returned 10
-       10:  468:	  _M_end_of_storage = _Bit_pointer();
-       10:  469:	}
+       30:  467:	  _M_start = _M_finish = _Bit_iterator();
+       30:  467-block  0
+call    0 returned 30
+       30:  468:	  _M_end_of_storage = _Bit_pointer();
+       30:  469:	}
         -:  470:      };
         -:  471:
         -:  472:      struct _Bvector_impl
@@ -543,29 +543,29 @@ call    0 returned 10
         -:  478:	  : _Bit_alloc_type()
         -:  479:	  { }
         -:  480:
-function _ZNSt13_Bvector_baseISaIbEE13_Bvector_implC2ERKSaImE called 10 returned 100% blocks executed 100%
-       10:  481:	  _Bvector_impl(const _Bit_alloc_type& __a) _GLIBCXX_NOEXCEPT
-       10:  482:	  : _Bit_alloc_type(__a)
-       10:  482-block  0
-call    0 returned 10
-call    1 returned 10
-       10:  483:	  { }
+function _ZNSt13_Bvector_baseISaIbEE13_Bvector_implC2ERKSaImE called 30 returned 100% blocks executed 100%
+       30:  481:	  _Bvector_impl(const _Bit_alloc_type& __a) _GLIBCXX_NOEXCEPT
+       30:  482:	  : _Bit_alloc_type(__a)
+       30:  482-block  0
+call    0 returned 30
+call    1 returned 30
+       30:  483:	  { }
         -:  484:
         -:  485:#if __cplusplus >= 201103L
         -:  486:	_Bvector_impl(_Bvector_impl&&) = default;
         -:  487:#endif
         -:  488:
         -:  489:	_Bit_type*
-function _ZNKSt13_Bvector_baseISaIbEE13_Bvector_impl11_M_end_addrEv called 10 returned 100% blocks executed 80%
-       10:  490:	_M_end_addr() const _GLIBCXX_NOEXCEPT
+function _ZNKSt13_Bvector_baseISaIbEE13_Bvector_impl11_M_end_addrEv called 30 returned 100% blocks executed 80%
+       30:  490:	_M_end_addr() const _GLIBCXX_NOEXCEPT
         -:  491:	{
-       10:  492:	  if (this->_M_end_of_storage)
-       10:  492-block  0
-branch  0 taken 10 (fallthrough)
+       30:  492:	  if (this->_M_end_of_storage)
+       30:  492-block  0
+branch  0 taken 30 (fallthrough)
 branch  1 taken 0
-       10:  493:	    return std::__addressof(this->_M_end_of_storage[-1]) + 1;
-       10:  493-block  0
-call    0 returned 10
+       30:  493:	    return std::__addressof(this->_M_end_of_storage[-1]) + 1;
+       30:  493-block  0
+call    0 returned 30
     #####:  494:	  return 0;
     %%%%%:  494-block  0
         -:  495:	}
@@ -579,10 +579,10 @@ call    0 returned 10
         -:  503:      { return this->_M_impl; }
         -:  504:
         -:  505:      const _Bit_alloc_type&
-function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 5 returned 100% blocks executed 100%
-        5:  506:      _M_get_Bit_allocator() const _GLIBCXX_NOEXCEPT
-        5:  507:      { return this->_M_impl; }
-        5:  507-block  0
+function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 15 returned 100% blocks executed 100%
+       15:  506:      _M_get_Bit_allocator() const _GLIBCXX_NOEXCEPT
+       15:  507:      { return this->_M_impl; }
+       15:  507-block  0
         -:  508:
         -:  509:      allocator_type
         -:  510:      get_allocator() const _GLIBCXX_NOEXCEPT
@@ -594,56 +594,56 @@ function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 5 returned 
         -:  516:      _Bvector_base() { }
         -:  517:#endif
         -:  518:
-function _ZNSt13_Bvector_baseISaIbEEC2ERKS0_ called 10 returned 100% blocks executed 100%
-       10:  519:      _Bvector_base(const allocator_type& __a)
-       10:  520:      : _M_impl(__a) { }
-       10:  520-block  0
-call    0 returned 10
-call    1 returned 10
-call    2 returned 10
+function _ZNSt13_Bvector_baseISaIbEEC2ERKS0_ called 30 returned 100% blocks executed 100%
+       30:  519:      _Bvector_base(const allocator_type& __a)
+       30:  520:      : _M_impl(__a) { }
+       30:  520-block  0
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
         -:  521:
         -:  522:#if __cplusplus >= 201103L
         -:  523:      _Bvector_base(_Bvector_base&&) = default;
         -:  524:#endif
         -:  525:
-function _ZNSt13_Bvector_baseISaIbEED2Ev called 10 returned 100% blocks executed 100%
-       10:  526:      ~_Bvector_base()
-       10:  527:      { this->_M_deallocate(); }
-       10:  527-block  0
-call    0 returned 10
-call    1 returned 10
+function _ZNSt13_Bvector_baseISaIbEED2Ev called 30 returned 100% blocks executed 100%
+       30:  526:      ~_Bvector_base()
+       30:  527:      { this->_M_deallocate(); }
+       30:  527-block  0
+call    0 returned 30
+call    1 returned 30
         -:  528:
         -:  529:    protected:
         -:  530:      _Bvector_impl _M_impl;
         -:  531:
         -:  532:      _Bit_pointer
-function _ZNSt13_Bvector_baseISaIbEE11_M_allocateEm called 10 returned 100% blocks executed 100%
-       10:  533:      _M_allocate(size_t __n)
-       10:  534:      { return _Bit_alloc_traits::allocate(_M_impl, _S_nword(__n)); }
-       10:  534-block  0
-call    0 returned 10
-call    1 returned 10
+function _ZNSt13_Bvector_baseISaIbEE11_M_allocateEm called 30 returned 100% blocks executed 100%
+       30:  533:      _M_allocate(size_t __n)
+       30:  534:      { return _Bit_alloc_traits::allocate(_M_impl, _S_nword(__n)); }
+       30:  534-block  0
+call    0 returned 30
+call    1 returned 30
         -:  535:
         -:  536:      void
-function _ZNSt13_Bvector_baseISaIbEE13_M_deallocateEv called 10 returned 100% blocks executed 100%
-       10:  537:      _M_deallocate()
+function _ZNSt13_Bvector_baseISaIbEE13_M_deallocateEv called 30 returned 100% blocks executed 100%
+       30:  537:      _M_deallocate()
         -:  538:      {
-       10:  539:	if (_M_impl._M_start._M_p)
-       10:  539-block  0
-branch  0 taken 10 (fallthrough)
+       30:  539:	if (_M_impl._M_start._M_p)
+       30:  539-block  0
+branch  0 taken 30 (fallthrough)
 branch  1 taken 0
         -:  540:	  {
-       10:  541:	    const size_t __n = _M_impl._M_end_addr() - _M_impl._M_start._M_p;
-       10:  541-block  0
-call    0 returned 10
-       10:  542:	    _Bit_alloc_traits::deallocate(_M_impl,
-       10:  543:					  _M_impl._M_end_of_storage - __n,
-call    0 returned 10
+       30:  541:	    const size_t __n = _M_impl._M_end_addr() - _M_impl._M_start._M_p;
+       30:  541-block  0
+call    0 returned 30
+       30:  542:	    _Bit_alloc_traits::deallocate(_M_impl,
+       30:  543:					  _M_impl._M_end_of_storage - __n,
+call    0 returned 30
         -:  544:					  __n);
-       10:  545:	    _M_impl._M_reset();
-call    0 returned 10
+       30:  545:	    _M_impl._M_reset();
+call    0 returned 30
         -:  546:	  }
-       10:  547:      }
+       30:  547:      }
         -:  548:
         -:  549:#if __cplusplus >= 201103L
         -:  550:      void
@@ -652,10 +652,10 @@ call    0 returned 10
         -:  553:#endif
         -:  554:
         -:  555:      static size_t
-function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 20 returned 100% blocks executed 100%
-       20:  556:      _S_nword(size_t __n)
-       20:  557:      { return (__n + int(_S_word_bit) - 1) / int(_S_word_bit); }
-       20:  557-block  0
+function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 60 returned 100% blocks executed 100%
+       60:  556:      _S_nword(size_t __n)
+       60:  557:      { return (__n + int(_S_word_bit) - 1) / int(_S_word_bit); }
+       60:  557-block  0
         -:  558:    };
         -:  559:
         -:  560:_GLIBCXX_END_NAMESPACE_CONTAINER
@@ -754,33 +754,33 @@ function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 20 returned 100% blocks e
         -:  653:	_M_initialize_value(__value);
         -:  654:      }
         -:  655:
-function _ZNSt6vectorIbSaIbEEC2ERKS1_ called 5 returned 100% blocks executed 93%
-        5:  656:      vector(const vector& __x)
-        5:  657:      : _Base(_Bit_alloc_traits::_S_select_on_copy(__x._M_get_Bit_allocator()))
-        5:  657-block  0
-call    0 returned 5
-call    1 returned 5
-call    2 returned 5
-call    3 returned 5
-call    4 returned 5
-call    5 returned 5
+function _ZNSt6vectorIbSaIbEEC2ERKS1_ called 15 returned 100% blocks executed 93%
+       15:  656:      vector(const vector& __x)
+       15:  657:      : _Base(_Bit_alloc_traits::_S_select_on_copy(__x._M_get_Bit_allocator()))
+       15:  657-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+call    3 returned 15
+call    4 returned 15
+call    5 returned 15
     $$$$$:  657-block  1
 call    6 never executed
         -:  658:      {
-        5:  659:	_M_initialize(__x.size());
-call    0 returned 5
-call    1 returned 5
-branch  2 taken 5 (fallthrough)
+       15:  659:	_M_initialize(__x.size());
+call    0 returned 15
+call    1 returned 15
+branch  2 taken 15 (fallthrough)
 branch  3 taken 0 (throw)
-        5:  660:	_M_copy_aligned(__x.begin(), __x.end(), this->_M_impl._M_start);
-        5:  660-block  0
-call    0 returned 5
-call    1 returned 5
-call    2 returned 5
-branch  3 taken 5 (fallthrough)
+       15:  660:	_M_copy_aligned(__x.begin(), __x.end(), this->_M_impl._M_start);
+       15:  660-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
 branch  4 taken 0 (throw)
-        5:  661:      }
-        5:  661-block  0
+       15:  661:      }
+       15:  661-block  0
         -:  662:
         -:  663:#if __cplusplus >= 201103L
         -:  664:      vector(vector&&) = default;
@@ -806,25 +806,25 @@ branch  4 taken 0 (throw)
         -:  684:	_M_copy_aligned(__x.begin(), __x.end(), this->_M_impl._M_start);
         -:  685:      }
         -:  686:
-function _ZNSt6vectorIbSaIbEEC2ESt16initializer_listIbERKS0_ called 5 returned 100% blocks executed 75%
-        5:  687:      vector(initializer_list<bool> __l,
+function _ZNSt6vectorIbSaIbEEC2ESt16initializer_listIbERKS0_ called 15 returned 100% blocks executed 75%
+       15:  687:      vector(initializer_list<bool> __l,
         -:  688:	     const allocator_type& __a = allocator_type())
-        5:  689:      : _Base(__a)
-        5:  689-block  0
-call    0 returned 5
+       15:  689:      : _Base(__a)
+       15:  689-block  0
+call    0 returned 15
     $$$$$:  689-block  1
 call    1 never executed
         -:  690:      {
-        5:  691:	_M_initialize_range(__l.begin(), __l.end(),
-call    0 returned 5
-call    1 returned 5
-call    2 returned 5
-branch  3 taken 5 (fallthrough)
+       15:  691:	_M_initialize_range(__l.begin(), __l.end(),
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
 branch  4 taken 0 (throw)
     $$$$$:  691-block  0
         -:  692:			    random_access_iterator_tag());
-        5:  693:      }
-        5:  693-block  0
+       15:  693:      }
+       15:  693-block  0
         -:  694:#endif
         -:  695:
         -:  696:#if __cplusplus >= 201103L
@@ -845,10 +845,10 @@ branch  4 taken 0 (throw)
         -:  711:	}
         -:  712:#endif
         -:  713:
-function _ZNSt6vectorIbSaIbEED2Ev called 10 returned 100% blocks executed 100%
-       10:  714:      ~vector() _GLIBCXX_NOEXCEPT { }
-       10:  714-block  0
-call    0 returned 10
+function _ZNSt6vectorIbSaIbEED2Ev called 30 returned 100% blocks executed 100%
+       30:  714:      ~vector() _GLIBCXX_NOEXCEPT { }
+       30:  714-block  0
+call    0 returned 30
         -:  715:
         -:  716:      vector&
         -:  717:      operator=(const vector& __x)
@@ -1256,43 +1256,43 @@ call    2 never executed
         -: 1108:    protected:
         -: 1109:      // Precondition: __first._M_offset == 0 && __result._M_offset == 0.
         -: 1110:      iterator
-function _ZNSt6vectorIbSaIbEE15_M_copy_alignedESt19_Bit_const_iteratorS2_St13_Bit_iterator called 5 returned 100% blocks executed 89%
-        5: 1111:      _M_copy_aligned(const_iterator __first, const_iterator __last,
+function _ZNSt6vectorIbSaIbEE15_M_copy_alignedESt19_Bit_const_iteratorS2_St13_Bit_iterator called 15 returned 100% blocks executed 89%
+       15: 1111:      _M_copy_aligned(const_iterator __first, const_iterator __last,
         -: 1112:		      iterator __result)
         -: 1113:      {
-        5: 1114:	_Bit_type* __q = std::copy(__first._M_p, __last._M_p, __result._M_p);
-        5: 1114-block  0
-call    0 returned 5
-       10: 1115:	return std::copy(const_iterator(__last._M_p, 0), __last,
-call    0 returned 5
-call    1 returned 5
-call    2 returned 5
-branch  3 taken 5 (fallthrough)
+       15: 1114:	_Bit_type* __q = std::copy(__first._M_p, __last._M_p, __result._M_p);
+       15: 1114-block  0
+call    0 returned 15
+       30: 1115:	return std::copy(const_iterator(__last._M_p, 0), __last,
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
 branch  4 taken 0 (throw)
-        5: 1115-block  0
+       15: 1115-block  0
     $$$$$: 1115-block  1
-       10: 1116:			 iterator(__q, 0));
-        5: 1116-block  0
-        5: 1116-block  1
+       30: 1116:			 iterator(__q, 0));
+       15: 1116-block  0
+       15: 1116-block  1
         -: 1117:      }
         -: 1118:
         -: 1119:      void
-function _ZNSt6vectorIbSaIbEE13_M_initializeEm called 10 returned 100% blocks executed 80%
-       10: 1120:      _M_initialize(size_type __n)
+function _ZNSt6vectorIbSaIbEE13_M_initializeEm called 30 returned 100% blocks executed 80%
+       30: 1120:      _M_initialize(size_type __n)
         -: 1121:      {
-       10: 1122:	if (__n)
-       10: 1122-block  0
-branch  0 taken 10 (fallthrough)
+       30: 1122:	if (__n)
+       30: 1122-block  0
+branch  0 taken 30 (fallthrough)
 branch  1 taken 0
         -: 1123:	  {
-       10: 1124:	    _Bit_pointer __q = this->_M_allocate(__n);
-       10: 1124-block  0
-call    0 returned 10
-       10: 1125:	    this->_M_impl._M_end_of_storage = __q + _S_nword(__n);
-call    0 returned 10
-       10: 1126:	    this->_M_impl._M_start = iterator(std::__addressof(*__q), 0);
-call    0 returned 10
-call    1 returned 10
+       30: 1124:	    _Bit_pointer __q = this->_M_allocate(__n);
+       30: 1124-block  0
+call    0 returned 30
+       30: 1125:	    this->_M_impl._M_end_of_storage = __q + _S_nword(__n);
+call    0 returned 30
+       30: 1126:	    this->_M_impl._M_start = iterator(std::__addressof(*__q), 0);
+call    0 returned 30
+call    1 returned 30
         -: 1127:	  }
         -: 1128:	else
         -: 1129:	  {
@@ -1301,11 +1301,11 @@ call    1 returned 10
     %%%%%: 1131-block  0
 call    0 never executed
         -: 1132:	  }
-       10: 1133:	this->_M_impl._M_finish = this->_M_impl._M_start + difference_type(__n);
-       10: 1133-block  0
-call    0 returned 10
+       30: 1133:	this->_M_impl._M_finish = this->_M_impl._M_start + difference_type(__n);
+       30: 1133-block  0
+call    0 returned 30
         -: 1134:
-       10: 1135:      }
+       30: 1135:      }
         -: 1136:
         -: 1137:      void
         -: 1138:      _M_initialize_value(bool __x)
@@ -1354,18 +1354,18 @@ call    0 returned 10
         -: 1181:
         -: 1182:      template<typename _ForwardIterator>
         -: 1183:	void
-function _ZNSt6vectorIbSaIbEE19_M_initialize_rangeIPKbEEvT_S5_St20forward_iterator_tag called 5 returned 100% blocks executed 100%
-        5: 1184:	_M_initialize_range(_ForwardIterator __first, _ForwardIterator __last,
+function _ZNSt6vectorIbSaIbEE19_M_initialize_rangeIPKbEEvT_S5_St20forward_iterator_tag called 15 returned 100% blocks executed 100%
+       15: 1184:	_M_initialize_range(_ForwardIterator __first, _ForwardIterator __last,
         -: 1185:			    std::forward_iterator_tag)
         -: 1186:	{
-        5: 1187:	  const size_type __n = std::distance(__first, __last);
-        5: 1187-block  0
-call    0 returned 5
-        5: 1188:	  _M_initialize(__n);
-call    0 returned 5
-        5: 1189:	  std::copy(__first, __last, this->_M_impl._M_start);
-call    0 returned 5
-        5: 1190:	}
+       15: 1187:	  const size_type __n = std::distance(__first, __last);
+       15: 1187-block  0
+call    0 returned 15
+       15: 1188:	  _M_initialize(__n);
+call    0 returned 15
+       15: 1189:	  std::copy(__first, __last, this->_M_impl._M_start);
+call    0 returned 15
+       15: 1190:	}
         -: 1191:
         -: 1192:#if __cplusplus < 201103L
         -: 1193:      // _GLIBCXX_RESOLVE_LIB_DEFECTS

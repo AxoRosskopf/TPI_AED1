@@ -81,19 +81,19 @@
         -:   77:#endif
         -:   78:
         -:   79:      _GLIBCXX20_CONSTEXPR
-      21*:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      63*:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorImEC2Ev:
-function _ZN9__gnu_cxx13new_allocatorImEC2Ev called 10 returned 100% blocks executed 100%
-       10:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorImEC2Ev called 30 returned 100% blocks executed 100%
+       30:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2Ev:
-function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2Ev called 1 returned 100% blocks executed 100%
-        1:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2Ev called 3 returned 100% blocks executed 100%
+        3:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIbEC2Ev:
-function _ZN9__gnu_cxx13new_allocatorIbEC2Ev called 10 returned 100% blocks executed 100%
-       10:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorIbEC2Ev called 30 returned 100% blocks executed 100%
+       30:   80:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIcEC2Ev:
 function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks executed 0%
@@ -101,15 +101,15 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
 ------------------
         -:   81:
         -:   82:      _GLIBCXX20_CONSTEXPR
-      17*:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+      51*:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2ERKS4_:
-function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2ERKS4_ called 2 returned 100% blocks executed 100%
-        2:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEEC2ERKS4_ called 6 returned 100% blocks executed 100%
+        6:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorImEC2ERKS1_:
-function _ZN9__gnu_cxx13new_allocatorImEC2ERKS1_ called 15 returned 100% blocks executed 100%
-       15:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorImEC2ERKS1_ called 45 returned 100% blocks executed 100%
+       45:   83:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_:
 function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks executed 0%
@@ -120,19 +120,19 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks exe
         -:   86:	_GLIBCXX20_CONSTEXPR
         -:   87:	new_allocator(const new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   88:
-      38*:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+     114*:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorImED2Ev:
-function _ZN9__gnu_cxx13new_allocatorImED2Ev called 25 returned 100% blocks executed 100%
-       25:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorImED2Ev called 75 returned 100% blocks executed 100%
+       75:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEED2Ev:
-function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEED2Ev called 3 returned 100% blocks executed 100%
-        3:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEED2Ev called 9 returned 100% blocks executed 100%
+        9:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIbED2Ev:
-function _ZN9__gnu_cxx13new_allocatorIbED2Ev called 10 returned 100% blocks executed 100%
-       10:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorIbED2Ev called 30 returned 100% blocks executed 100%
+       30:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIcED2Ev:
 function _ZN9__gnu_cxx13new_allocatorIcED2Ev called 0 returned 0% blocks executed 0%
@@ -150,9 +150,9 @@ function _ZN9__gnu_cxx13new_allocatorIcED2Ev called 0 returned 0% blocks execute
         -:   99:      // NB: __n is permitted to be 0.  The C++ standard says nothing
         -:  100:      // about what the return value is when __n == 0.
         -:  101:      _GLIBCXX_NODISCARD pointer
-       11:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
+       33:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
         -:  103:      {
-       11:  104:	if (__n > this->max_size())
+       33:  104:	if (__n > this->max_size())
     #####:  105:	  std::__throw_bad_alloc();
         -:  106:
         -:  107:#if __cpp_aligned_new
@@ -162,18 +162,18 @@ function _ZN9__gnu_cxx13new_allocatorIcED2Ev called 0 returned 0% blocks execute
         -:  111:	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
         -:  112:	  }
         -:  113:#endif
-       11:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+       33:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
         -:  115:      }
 ------------------
 _ZN9__gnu_cxx13new_allocatorImE8allocateEmPKv:
-function _ZN9__gnu_cxx13new_allocatorImE8allocateEmPKv called 10 returned 100% blocks executed 83%
-       10:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
+function _ZN9__gnu_cxx13new_allocatorImE8allocateEmPKv called 30 returned 100% blocks executed 83%
+       30:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
         -:  103:      {
-       10:  104:	if (__n > this->max_size())
-       10:  104-block  0
-call    0 returned 10
+       30:  104:	if (__n > this->max_size())
+       30:  104-block  0
+call    0 returned 30
 branch  1 taken 0 (fallthrough)
-branch  2 taken 10
+branch  2 taken 30
     #####:  105:	  std::__throw_bad_alloc();
     %%%%%:  105-block  0
 call    0 never executed
@@ -185,20 +185,20 @@ call    0 never executed
         -:  111:	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
         -:  112:	  }
         -:  113:#endif
-       10:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
-       10:  114-block  0
-call    0 returned 10
+       30:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+       30:  114-block  0
+call    0 returned 30
         -:  115:      }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE8allocateEmPKv:
-function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE8allocateEmPKv called 1 returned 100% blocks executed 83%
-        1:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
+function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE8allocateEmPKv called 3 returned 100% blocks executed 83%
+        3:  102:      allocate(size_type __n, const void* = static_cast<const void*>(0))
         -:  103:      {
-        1:  104:	if (__n > this->max_size())
-        1:  104-block  0
-call    0 returned 1
+        3:  104:	if (__n > this->max_size())
+        3:  104-block  0
+call    0 returned 3
 branch  1 taken 0 (fallthrough)
-branch  2 taken 1
+branch  2 taken 3
     #####:  105:	  std::__throw_bad_alloc();
     %%%%%:  105-block  0
 call    0 never executed
@@ -210,15 +210,15 @@ call    0 never executed
         -:  111:	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
         -:  112:	  }
         -:  113:#endif
-        1:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
-        1:  114-block  0
-call    0 returned 1
+        3:  114:	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+        3:  114-block  0
+call    0 returned 3
         -:  115:      }
 ------------------
         -:  116:
         -:  117:      // __p is not permitted to be a null pointer.
         -:  118:      void
-       11:  119:      deallocate(pointer __p, size_type)
+       33:  119:      deallocate(pointer __p, size_type)
         -:  120:      {
         -:  121:#if __cpp_aligned_new
         -:  122:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
@@ -227,12 +227,12 @@ call    0 returned 1
         -:  125:	    return;
         -:  126:	  }
         -:  127:#endif
-       11:  128:	::operator delete(__p);
-       11:  129:      }
+       33:  128:	::operator delete(__p);
+       33:  129:      }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE10deallocateEPS3_m:
-function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE10deallocateEPS3_m called 1 returned 100% blocks executed 100%
-        1:  119:      deallocate(pointer __p, size_type)
+function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE10deallocateEPS3_m called 3 returned 100% blocks executed 100%
+        3:  119:      deallocate(pointer __p, size_type)
         -:  120:      {
         -:  121:#if __cpp_aligned_new
         -:  122:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
@@ -241,14 +241,14 @@ function _ZN9__gnu_cxx13new_allocatorISt6vectorIbSaIbEEE10deallocateEPS3_m calle
         -:  125:	    return;
         -:  126:	  }
         -:  127:#endif
-        1:  128:	::operator delete(__p);
-        1:  128-block  0
-call    0 returned 1
-        1:  129:      }
+        3:  128:	::operator delete(__p);
+        3:  128-block  0
+call    0 returned 3
+        3:  129:      }
 ------------------
 _ZN9__gnu_cxx13new_allocatorImE10deallocateEPmm:
-function _ZN9__gnu_cxx13new_allocatorImE10deallocateEPmm called 10 returned 100% blocks executed 100%
-       10:  119:      deallocate(pointer __p, size_type)
+function _ZN9__gnu_cxx13new_allocatorImE10deallocateEPmm called 30 returned 100% blocks executed 100%
+       30:  119:      deallocate(pointer __p, size_type)
         -:  120:      {
         -:  121:#if __cpp_aligned_new
         -:  122:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
@@ -257,17 +257,17 @@ function _ZN9__gnu_cxx13new_allocatorImE10deallocateEPmm called 10 returned 100%
         -:  125:	    return;
         -:  126:	  }
         -:  127:#endif
-       10:  128:	::operator delete(__p);
-       10:  128-block  0
-call    0 returned 10
-       10:  129:      }
+       30:  128:	::operator delete(__p);
+       30:  128-block  0
+call    0 returned 30
+       30:  129:      }
 ------------------
         -:  130:
         -:  131:      size_type
-       12:  132:      max_size() const _GLIBCXX_USE_NOEXCEPT
+       36:  132:      max_size() const _GLIBCXX_USE_NOEXCEPT
         -:  133:      {
         -:  134:#if __PTRDIFF_MAX__ < __SIZE_MAX__
-       12:  135:	return size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
+       36:  135:	return size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
         -:  136:#else
         -:  137:	return size_t(-1) / sizeof(_Tp);
         -:  138:#endif

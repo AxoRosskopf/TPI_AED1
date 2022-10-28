@@ -18,12 +18,12 @@
         -:   14:
         -:   15:/******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
         -:   16:
-function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 3 returned 100% blocks executed 100%
-        3:   17:int minasAdyacentes(tablero& t, pos p) {
-        3:   18:    int result = numMinasAdyacentes(t, p);
-        3:   18-block  0
-call    0 returned 3
-        3:   19:    return result;
+function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 4 returned 100% blocks executed 100%
+        4:   17:int minasAdyacentes(tablero& t, pos p) {
+        4:   18:    int result = numMinasAdyacentes(t, p);
+        4:   18-block  0
+call    0 returned 4
+        4:   19:    return result;
         -:   20:}
         -:   21:
         -:   22:
@@ -36,109 +36,103 @@ function _Z16cambiarBanderitaRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiES
     #####:   28:}
         -:   29:
         -:   30:/******++++**************************** EJERCICIO perdio ***********+++***********************/
-function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 0 returned 0% blocks executed 0%
-    #####:   31:bool perdio(tablero& t, jugadas& j) {
-    #####:   32:    bool result=false;
-    #####:   33:    if (juegoValido(t,j)){
-    %%%%%:   33-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   34:        for (int i=0; i<j.size();i++){
-    %%%%%:   34-block  0
-    %%%%%:   34-block  1
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   34-block  2
-    #####:   35:            if (hayMinaEnPosicion(j[i].first,t)){
+function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 2 returned 100% blocks executed 90%
+        2:   31:bool perdio(tablero& t, jugadas& j) {
+        2:   32:    bool result=false;
+       13:   33:    for (int i=0; i<j.size();i++){
+        2:   33-block  0
+       13:   33-block  1
+call    0 returned 13
+branch  1 taken 11 (fallthrough)
+branch  2 taken 2
+       11:   33-block  2
+       11:   34:        if (hayMinaEnPosicion(j[i].first,t)){
+       11:   34-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 0 (fallthrough)
+branch  3 taken 11
+    #####:   35:            result=true;
     %%%%%:   35-block  0
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    #####:   36:                result=true;
-    %%%%%:   36-block  0
-        -:   37:            }
-        -:   38:        }
-        -:   39:    }
-    #####:   40:    return result;
-    %%%%%:   40-block  0
-        -:   41:}
-        -:   42:
-        -:   43:/******++++**************************** EJERCICIO gano ***********+++***********************/
+        -:   36:        }
+        -:   37:    }
+        2:   38:    return result;
+        2:   38-block  0
+        -:   39:}
+        -:   40:
+        -:   41:/******++++**************************** EJERCICIO gano ***********+++***********************/
 function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 0 returned 0% blocks executed 0%
-    #####:   44:bool gano(tablero& t, jugadas& j) {
-    #####:   45:    bool result= true;
-    #####:   46:    if (juegoValido(t,j)){
+    #####:   42:bool gano(tablero& t, jugadas& j) {
+    #####:   43:    bool result= true;
+    #####:   44:    if (juegoValido(t,j)){
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:        for (int i=0;i<t.size();i++){
+    %%%%%:   45-block  0
+    %%%%%:   45-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   45-block  2
+    #####:   46:            for (int k=0;k<t.size();k++){
     %%%%%:   46-block  0
+    %%%%%:   46-block  1
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   47:        for (int i=0;i<t.size();i++){
+    %%%%%:   46-block  2
+    #####:   47:                pos pos1={i,k};
     %%%%%:   47-block  0
-    %%%%%:   47-block  1
+call    0 never executed
+    #####:   48:                if (fueJugada(pos1,j) && t[i][k]==true){
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   47-block  2
-    #####:   48:            for (int k=0;k<t.size();k++){
     %%%%%:   48-block  0
-    %%%%%:   48-block  1
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   48-block  2
-    #####:   49:                pos pos1={i,k};
-    %%%%%:   49-block  0
-call    0 never executed
-    #####:   50:                if (fueJugada(pos1,j) && t[i][k]==true){
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   50-block  0
 branch  3 never executed
 branch  4 never executed
-    %%%%%:   50-block  1
+    %%%%%:   48-block  1
 call    5 never executed
 call    6 never executed
 call    7 never executed
 branch  8 never executed
 branch  9 never executed
-    %%%%%:   50-block  2
-    %%%%%:   50-block  3
-    %%%%%:   50-block  4
+    %%%%%:   48-block  2
+    %%%%%:   48-block  3
+    %%%%%:   48-block  4
 branch 10 never executed
 branch 11 never executed
-    $$$$$:   50-block  5
-    #####:   51:                    result=false;
-    %%%%%:   51-block  0
-        -:   52:                }
-        -:   53:            }
-        -:   54:        }
-        -:   55:    }
-    #####:   56:    return result;
-    %%%%%:   56-block  0
-    %%%%%:   56-block  1
-        -:   57:}
-        -:   58:
-        -:   59:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+    $$$$$:   48-block  5
+    #####:   49:                    result=false;
+    %%%%%:   49-block  0
+        -:   50:                }
+        -:   51:            }
+        -:   52:        }
+        -:   53:    }
+    #####:   54:    return result;
+    %%%%%:   54-block  0
+    %%%%%:   54-block  1
+        -:   55:}
+        -:   56:
+        -:   57:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 function _Z9jugarPlusRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EES6_RS_IS5_IS6_iESaISA_EE called 0 returned 0% blocks executed 0%
-    #####:   60:void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
-        -:   61:    // ...
-    #####:   62:}
-        -:   63:
-        -:   64:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
-        -:   65:/*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
-        -:   66:    bool hay=false;
-        -:   67:    if (juegoValido(t,j) && banderitasValidas(b,t,j)){
-        -:   68:        if (hayPosicionSugerible(j,b,t)){
-        -:   69:            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
-        -:   70:                hay=true;
-        -:   71:            }
-        -:   72:        }
-        -:   73:
-        -:   74:    }
-        -:   75:    return hay;
-        -:   76:}
-        -:   77:*/
+    #####:   58:void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
+        -:   59:    // ...
+    #####:   60:}
+        -:   61:
+        -:   62:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+        -:   63:/*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+        -:   64:    bool hay=false;
+        -:   65:    if (juegoValido(t,j) && banderitasValidas(b,t,j)){
+        -:   66:        if (hayPosicionSugerible(j,b,t)){
+        -:   67:            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+        -:   68:                hay=true;
+        -:   69:            }
+        -:   70:        }
+        -:   71:
+        -:   72:    }
+        -:   73:    return hay;
+        -:   74:}
+        -:   75:*/

@@ -449,7 +449,7 @@
         -:  445:// of a Test object.
         -:  446:class TestFactoryBase {
         -:  447: public:
-       3*:  448:  virtual ~TestFactoryBase() {}
+       6*:  448:  virtual ~TestFactoryBase() {}
 ------------------
 _ZN7testing8internal15TestFactoryBaseD0Ev:
 function _ZN7testing8internal15TestFactoryBaseD0Ev called 0 returned 0% blocks executed 0%
@@ -459,8 +459,8 @@ call    0 never executed
 call    1 never executed
 ------------------
 _ZN7testing8internal15TestFactoryBaseD2Ev:
-function _ZN7testing8internal15TestFactoryBaseD2Ev called 3 returned 100% blocks executed 100%
-        3:  448:  virtual ~TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseD2Ev called 6 returned 100% blocks executed 100%
+        6:  448:  virtual ~TestFactoryBase() {}
 ------------------
         -:  449:
         -:  450:  // Creates a test instance to run. The instance is both created and destroyed
@@ -468,8 +468,8 @@ function _ZN7testing8internal15TestFactoryBaseD2Ev called 3 returned 100% blocks
         -:  452:  virtual Test* CreateTest() = 0;
         -:  453:
         -:  454: protected:
-function _ZN7testing8internal15TestFactoryBaseC2Ev called 3 returned 100% blocks executed 100%
-        3:  455:  TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseC2Ev called 6 returned 100% blocks executed 100%
+        6:  455:  TestFactoryBase() {}
         -:  456:
         -:  457: private:
         -:  458:  GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);
@@ -480,7 +480,7 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 3 returned 100% blocks
         -:  463:template <class TestClass>
         -:  464:class TestFactoryImpl : public TestFactoryBase {
         -:  465: public:
-        3:  466:  virtual Test* CreateTest() { return new TestClass; }
+        4:  466:  virtual Test* CreateTest() { return new TestClass; }
 ------------------
 _ZN7testing8internal15TestFactoryImplI34minasAdyacentesTest_posCentro_TestE10CreateTestEv:
 function _ZN7testing8internal15TestFactoryImplI34minasAdyacentesTest_posCentro_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
@@ -521,6 +521,19 @@ branch  3 taken 0 (throw)
     $$$$$:  466-block  3
 call    4 never executed
 ------------------
+_ZN7testing8internal15TestFactoryImplI38minasAdyacentesTest_centroConMina_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI38minasAdyacentesTest_centroConMina_TestE10CreateTestEv called 1 returned 100% blocks executed 83%
+        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+        1:  466-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  466-block  1
+        1:  466-block  2
+    $$$$$:  466-block  3
+call    4 never executed
+------------------
         -:  467:};
         -:  468:
         -:  469:#if GTEST_OS_WINDOWS
@@ -541,11 +554,11 @@ call    4 never executed
         -:  484:typedef void (*TearDownTestCaseFunc)();
         -:  485:
         -:  486:struct CodeLocation {
-function _ZN7testing8internal12CodeLocationC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 3 returned 100% blocks executed 100%
-        3:  487:  CodeLocation(const std::string& a_file, int a_line)
-        3:  488:      : file(a_file), line(a_line) {}
-        3:  488-block  0
-call    0 returned 3
+function _ZN7testing8internal12CodeLocationC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 6 returned 100% blocks executed 100%
+        6:  487:  CodeLocation(const std::string& a_file, int a_line)
+        6:  488:      : file(a_file), line(a_line) {}
+        6:  488-block  0
+call    0 returned 6
         -:  489:
         -:  490:  std::string file;
         -:  491:  int line;

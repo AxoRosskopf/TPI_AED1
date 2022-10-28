@@ -916,8 +916,8 @@
         -:  912:      // [23.2.4.2] capacity
         -:  913:      /**  Returns the number of elements in the %vector.  */
         -:  914:      size_type
-      48*:  915:      size() const _GLIBCXX_NOEXCEPT
-      48*:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+      79*:  915:      size() const _GLIBCXX_NOEXCEPT
+      79*:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 ------------------
 _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv:
 function _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv called 0 returned 0% blocks executed 0%
@@ -926,16 +926,16 @@ function _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv called 0 returned 0% blocks ex
     %%%%%:  916-block  0
 ------------------
 _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv:
-function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv called 0 returned 0% blocks executed 0%
-    #####:  915:      size() const _GLIBCXX_NOEXCEPT
-    #####:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-    %%%%%:  916-block  0
+function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv called 13 returned 100% blocks executed 100%
+       13:  915:      size() const _GLIBCXX_NOEXCEPT
+       13:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+       13:  916-block  0
 ------------------
 _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv:
-function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 48 returned 100% blocks executed 100%
-       48:  915:      size() const _GLIBCXX_NOEXCEPT
-       48:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-       48:  916-block  0
+function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 66 returned 100% blocks executed 100%
+       66:  915:      size() const _GLIBCXX_NOEXCEPT
+       66:  916:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+       66:  916-block  0
 ------------------
         -:  917:
         -:  918:      /**  Returns the size() of the largest possible %vector.  */
@@ -1060,10 +1060,10 @@ function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 48 returned 100% blocks 
         -: 1037:       *  see at().)
         -: 1038:       */
         -: 1039:      reference
-      14*: 1040:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      44*: 1040:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1041:      {
         -: 1042:	__glibcxx_requires_subscript(__n);
-      14*: 1043:	return *(this->_M_impl._M_start + __n);
+      44*: 1043:	return *(this->_M_impl._M_start + __n);
         -: 1044:      }
         -: 1045:
         -: 1046:      /**

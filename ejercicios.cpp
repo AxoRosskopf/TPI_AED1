@@ -30,13 +30,12 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
 bool perdio(tablero& t, jugadas& j) {
     bool result=false;
-    if (juegoValido(t,j)){
-        for (int i=0; i<j.size();i++){
-            if (hayMinaEnPosicion(j[i].first,t)){
-                result=true;
-            }
+    for (int i=0; i<j.size();i++){
+        if (hayMinaEnPosicion(j[i].first,t)){
+            result=true;
         }
     }
+
     return result;
 }
 

@@ -305,9 +305,9 @@
         -:  301:  }
         -:  302:
         -:  303:  // Returns true iff the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 3 returned 100% blocks executed 100%
-        3:  304:  operator bool() const { return success_; }  // NOLINT
-        3:  304-block  0
+function _ZNK7testing15AssertionResultcvbEv called 6 returned 100% blocks executed 100%
+        6:  304:  operator bool() const { return success_; }  // NOLINT
+        6:  304-block  0
         -:  305:
         -:  306:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  307:  AssertionResult operator!() const;
@@ -430,8 +430,8 @@ call    0 never executed
         -:  411:  // test in test case Foo.  Hence a sub-class can define its own
         -:  412:  // SetUpTestCase() method to shadow the one defined in the super
         -:  413:  // class.
-function _ZN7testing4Test13SetUpTestCaseEv called 1 returned 100% blocks executed 100%
-        1:  414:  static void SetUpTestCase() {}
+function _ZN7testing4Test13SetUpTestCaseEv called 2 returned 100% blocks executed 100%
+        2:  414:  static void SetUpTestCase() {}
         -:  415:
         -:  416:  // Tears down the stuff shared by all tests in this test case.
         -:  417:  //
@@ -439,8 +439,8 @@ function _ZN7testing4Test13SetUpTestCaseEv called 1 returned 100% blocks execute
         -:  419:  // test in test case Foo.  Hence a sub-class can define its own
         -:  420:  // TearDownTestCase() method to shadow the one defined in the super
         -:  421:  // class.
-function _ZN7testing4Test16TearDownTestCaseEv called 1 returned 100% blocks executed 100%
-        1:  422:  static void TearDownTestCase() {}
+function _ZN7testing4Test16TearDownTestCaseEv called 2 returned 100% blocks executed 100%
+        2:  422:  static void TearDownTestCase() {}
         -:  423:
         -:  424:  // Returns true iff the current test has a fatal failure.
         -:  425:  static bool HasFatalFailure();
@@ -1465,18 +1465,18 @@ call   10 never executed
         -: 1423:
         -: 1424:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1425:template <typename T1, typename T2>
-function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 3 returned 100% blocks executed 75%
-        3: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
+function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 4 returned 100% blocks executed 75%
+        4: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
         -: 1427:                            const char* rhs_expression,
         -: 1428:                            const T1& lhs,
         -: 1429:                            const T2& rhs) {
-        3: 1430:  if (lhs == rhs) {
-        3: 1430-block  0
-branch  0 taken 3 (fallthrough)
+        4: 1430:  if (lhs == rhs) {
+        4: 1430-block  0
+branch  0 taken 4 (fallthrough)
 branch  1 taken 0
-        3: 1431:    return AssertionSuccess();
-        3: 1431-block  0
-call    0 returned 3
+        4: 1431:    return AssertionSuccess();
+        4: 1431-block  0
+call    0 returned 4
         -: 1432:  }
         -: 1433:
     #####: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
@@ -1535,8 +1535,8 @@ call    0 returned 2
         -: 1482:  // NOT a pointer, e.g. ASSERT_EQ(0, AnIntFunction()) or
         -: 1483:  // EXPECT_EQ(false, a_bool).
         -: 1484:  template <typename T1, typename T2>
-function _ZN7testing8internal8EqHelperILb1EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_PNS0_8EnableIfIXntsrNS0_10is_pointerISA_EE5valueEE4typeE called 1 returned 100% blocks executed 100%
-        1: 1485:  static AssertionResult Compare(
+function _ZN7testing8internal8EqHelperILb1EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_PNS0_8EnableIfIXntsrNS0_10is_pointerISA_EE5valueEE4typeE called 2 returned 100% blocks executed 100%
+        2: 1485:  static AssertionResult Compare(
         -: 1486:      const char* lhs_expression,
         -: 1487:      const char* rhs_expression,
         -: 1488:      const T1& lhs,
@@ -1547,9 +1547,9 @@ function _ZN7testing8internal8EqHelperILb1EE7CompareIiiEENS_15AssertionResultEPK
         -: 1493:      // to match the Secret* in the other overload, which would otherwise make
         -: 1494:      // this template match better.
         -: 1495:      typename EnableIf<!is_pointer<T2>::value>::type* = 0) {
-        1: 1496:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
-        1: 1496-block  0
-call    0 returned 1
+        2: 1496:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
+        2: 1496-block  0
+call    0 returned 2
         -: 1497:  }
         -: 1498:
         -: 1499:  // This version will be picked when the second argument to ASSERT_EQ() is a
