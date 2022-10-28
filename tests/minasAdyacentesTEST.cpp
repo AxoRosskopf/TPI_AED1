@@ -40,3 +40,7 @@ TEST(minasAdyacentesTest, bordeFinal){
     pos p (4,4);
     EXPECT_EQ(0, minasAdyacentes(t,p));
 }
+TEST(minasAdyacentesTest, centroConMina){
+    pos p (2,1);
+    EXPECT_EQ(0, minasAdyacentes(t,p));
+}

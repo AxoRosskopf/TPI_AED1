@@ -83,7 +83,6 @@ bool hayMinaEnPosicion(pos p, tablero& t){
         return true;
     }else return false;
 }
-
 int minasPisadas(jugadas& j ,tablero& t){
     int minas = 0;
     for(int i = 0; i<j.size(); i++){
