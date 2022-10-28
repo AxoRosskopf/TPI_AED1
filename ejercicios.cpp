@@ -42,16 +42,17 @@ bool perdio(tablero& t, jugadas& j) {
 /******++++**************************** EJERCICIO gano ***********+++***********************/
 bool gano(tablero& t, jugadas& j) {
     bool result= true;
-    if (juegoValido(t,j)){
-        for (int i=0;i<t.size();i++){
-            for (int k=0;k<t.size();k++){
-                pos pos1={i,k};
-                if (fueJugada(pos1,j) && t[i][k]==true){
-                    result=false;
+    for (int i=0;i<t.size();i++){
+        for (int k=0;k<t.size();k++){
+            pos pos1={i,k};
+            if (t[i][k]==cVACIA){
+                if (!fueJugada(pos1, j)) {
+                    result = false;
                 }
             }
         }
     }
+
     return result;
 }
 

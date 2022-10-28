@@ -26,7 +26,7 @@ tablero t = {
     { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
     { cMINA,  cVACIA, cMINA,  cVACIA, cVACIA },
 };
-jugadas jugadasValidas2 = {
+jugadas jugadasNoGano = {
     jugada(pos(0, 2), 2),jugada(pos(0, 4), 1),
     jugada(pos(1, 0), 3),jugada(pos(1, 1), 3),jugada(pos(1, 2), 3),jugada(pos(1, 4), 1),
     jugada(pos(2, 0), 1),jugada(pos(2, 2), 2),jugada(pos(2, 3), 1),jugada(pos(2, 4), 1),
@@ -34,7 +34,34 @@ jugadas jugadasValidas2 = {
     jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
 };
 
+jugadas jugadasGano = {
+        jugada(pos(0, 2), 2),jugada(pos(0, 3), 1),jugada(pos(0, 4), 1),
+        jugada(pos(1, 0), 3),jugada(pos(1, 1), 3),jugada(pos(1, 2), 3),jugada(pos(1, 4), 1),
+        jugada(pos(2, 0), 1),jugada(pos(2, 2), 2),jugada(pos(2, 3), 1),jugada(pos(2, 4), 1),
+        jugada(pos(3, 0), 2),jugada(pos(3, 1), 3),jugada(pos(3, 2), 2),jugada(pos(3, 3), 1),jugada(pos(3, 4), 0),
+        jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+};
+
+jugadas JugadasPerdio = {
+        jugada(pos(0, 0), 1)
+};
+
 TEST(ganoTEST, todaviaNoGano){
-    jugadas j = jugadasValidas2;
+    jugadas j = jugadasNoGano;
+    ASSERT_FALSE(gano(t, j));
+}
+
+TEST(ganoTEST, listaVacia){
+    jugadas j = {};
+    ASSERT_FALSE(gano(t, j));
+}
+
+TEST(ganoTEST, gano){
+    jugadas j = jugadasGano;
+    ASSERT_TRUE(gano(t, j));
+}
+
+TEST(ganoTEST, perdio){
+    jugadas j = JugadasPerdio;
     ASSERT_FALSE(gano(t, j));
 }

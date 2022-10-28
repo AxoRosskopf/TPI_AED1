@@ -128,11 +128,13 @@ bool esBanderita(pos p, banderitas& b){
 }
 
 bool fueJugada(pos p, jugadas& j){
+    bool result= false;
     for(int i = 0; i<j.size(); i++){
         if (p == j[i].first){
-            return true;
-        } else return false;
+            result=true;
+        } ;
     }
+    return result;
 }
 
 bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t){
