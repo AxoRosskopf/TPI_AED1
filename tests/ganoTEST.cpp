@@ -18,7 +18,7 @@ using namespace std;
 // ├───┼───┼───┼───┼───┤
 // │ * │ 2 │ * │ 1 │ 0 │
 // └───┴───┴───┴───┴───┘
-/*
+
 tablero t = {
     { cMINA,  cMINA,  cVACIA, cVACIA, cVACIA },
     { cVACIA, cVACIA, cVACIA, cMINA,  cVACIA },
@@ -38,4 +38,3 @@ TEST(ganoTEST, todaviaNoGano){
     jugadas j = jugadasValidas2;
     ASSERT_FALSE(gano(t, j));
 }
-*/
