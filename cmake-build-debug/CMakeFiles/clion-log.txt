@@ -1,4 +1,4 @@
-/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/clinux01/Escritorio/TPI/TPI_AED1 -B /home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1" -B "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug
+-- Build files have been written to: C:/Users/Ariel/Google Drive/UBA/AED1/Laboratorio/TPI_AED1/cmake-build-debug

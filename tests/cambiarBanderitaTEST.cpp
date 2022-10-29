@@ -36,7 +36,7 @@ TEST(cambiarBanderitaTEST, esBanderita) {
     pos pos1(0, 0);
     cambiarBanderita(t1,jugadas1,pos1,b);
     banderitas c = {pos (2,1)};
-    EXPECT_EQ(b,c);
+    EXPECT_TRUE(mismasBanderitas(b,c));
 }
 
 TEST(cambiarBanderitaTEST, noEsBanderita) {
@@ -44,5 +44,5 @@ TEST(cambiarBanderitaTEST, noEsBanderita) {
     pos pos1(1, 3);
     cambiarBanderita(t1,jugadas1,pos1,b);
     banderitas c = {pos(0, 0), pos (2,1), pos(1,3)};
-    EXPECT_EQ(b,c);
+    EXPECT_TRUE(mismasBanderitas(b,c));
 }

@@ -1,6 +1,6 @@
-        -:    0:Source:/home/clinux01/Escritorio/TPI/TPI_AED1/lib/googletest-master/googletest/include/gtest/gtest.h
-        -:    0:Graph:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.gcno
-        -:    0:Data:/home/clinux01/Escritorio/TPI/TPI_AED1/cmake-build-debug/CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.gcda
+        -:    0:Source:C:/Users/Ariel/GOOGLE~1/UBA/AED1/LABORA~1/TPI_AED1/lib/GOOGLE~1/GOOGLE~2/include/gtest/gtest.h
+        -:    0:Graph:C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.gcno
+        -:    0:Data:C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.gcda
         -:    0:Runs:1
         -:    1:// Copyright 2005, Google Inc.
         -:    2:// All rights reserved.
@@ -305,9 +305,9 @@
         -:  301:  }
         -:  302:
         -:  303:  // Returns true iff the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 12 returned 100% blocks executed 100%
-       12:  304:  operator bool() const { return success_; }  // NOLINT
-       12:  304-block  0
+function _ZNK7testing15AssertionResultcvbEv called 14 returned 100% blocks executed 100%
+       14:  304:  operator bool() const { return success_; }  // NOLINT
+       14:  304-block  0
         -:  305:
         -:  306:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  307:  AssertionResult operator!() const;
@@ -316,18 +316,18 @@ function _ZNK7testing15AssertionResultcvbEv called 12 returned 100% blocks execu
         -:  310:  // use it when they fail (i.e., the predicate's outcome doesn't match the
         -:  311:  // assertion's expectation). When nothing has been streamed into the
         -:  312:  // object, returns an empty string.
-function _ZNK7testing15AssertionResult7messageEv called 0 returned 0% blocks executed 0%
-    #####:  313:  const char* message() const {
-    #####:  314:    return message_.get() != NULL ?  message_->c_str() : "";
-    %%%%%:  314-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+function _ZNK7testing15AssertionResult7messageEv called 1 returned 100% blocks executed 71%
+        1:  313:  const char* message() const {
+       1*:  314:    return message_.get() != NULL ?  message_->c_str() : "";
+        1:  314-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
     %%%%%:  314-block  1
 call    3 never executed
 call    4 never executed
-    %%%%%:  314-block  2
-    %%%%%:  314-block  3
+        1:  314-block  2
+        1:  314-block  3
         -:  315:  }
         -:  316:  // TODO(vladl@google.com): Remove this after making sure no clients use it.
         -:  317:  // Deprecated; please use message() instead.
@@ -430,8 +430,8 @@ call    0 never executed
         -:  411:  // test in test case Foo.  Hence a sub-class can define its own
         -:  412:  // SetUpTestCase() method to shadow the one defined in the super
         -:  413:  // class.
-function _ZN7testing4Test13SetUpTestCaseEv called 4 returned 100% blocks executed 100%
-        4:  414:  static void SetUpTestCase() {}
+function _ZN7testing4Test13SetUpTestCaseEv called 5 returned 100% blocks executed 100%
+        5:  414:  static void SetUpTestCase() {}
         -:  415:
         -:  416:  // Tears down the stuff shared by all tests in this test case.
         -:  417:  //
@@ -439,8 +439,8 @@ function _ZN7testing4Test13SetUpTestCaseEv called 4 returned 100% blocks execute
         -:  419:  // test in test case Foo.  Hence a sub-class can define its own
         -:  420:  // TearDownTestCase() method to shadow the one defined in the super
         -:  421:  // class.
-function _ZN7testing4Test16TearDownTestCaseEv called 4 returned 100% blocks executed 100%
-        4:  422:  static void TearDownTestCase() {}
+function _ZN7testing4Test16TearDownTestCaseEv called 5 returned 100% blocks executed 100%
+        5:  422:  static void TearDownTestCase() {}
         -:  423:
         -:  424:  // Returns true iff the current test has a fatal failure.
         -:  425:  static bool HasFatalFailure();

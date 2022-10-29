@@ -28,11 +28,13 @@ bool fueJugada(pos p, jugadas& j);
 bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t);
 void sacaBanderita(pos p,banderitas& b);
 void plantaBanderita(pos p,banderitas& b);
+bool mismasBanderitas(banderitas& b, banderitas& control);
+
 
 //Ejercicio 5
 void incluirJugadaActual(pos p,jugadas& j, tablero& t);
 bool esParteDelCaminoLibre(pos partida, pos final, tablero& t);
-bool mismosElementos(jugadas& j, jugadas& control);
+bool mismasJugadas(jugadas& j, jugadas& control);
 
 
 //Ejecicio 6

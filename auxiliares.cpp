@@ -160,6 +160,30 @@ void plantaBanderita(pos p,banderitas& b){
     b.push_back(p);
 }
 
+bool mismasBanderitas(banderitas& b, banderitas& control){
+    bool result = false;
+    if (b.size() == control.size()) {
+        result = true;
+        int contador = 0;
+        for (int i = 0; i < b.size(); i++) {
+            int aux = 0;
+            for (int k = 0; k < b.size(); k++) {
+                if (b[i] == control[k]) {
+                    aux++;
+                }
+            }
+            if (aux != 1) {
+                result = false;
+            } else contador++;
+            if (contador == b.size()) {
+                result = true;
+            }
+        }
+    }
+    return result;
+}
+
+
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 5
 void incluirJugadaActual(pos pos1,jugadas & j, tablero& t){
     jugada jugada1 (pos1, minasAdyacentes(t,pos1));
@@ -176,24 +200,28 @@ bool esParteDelCaminoLibre(pos partida, pos final, tablero& t) {
     return result;
 }
 
-bool mismosElementos(jugadas& j, jugadas& control){
-    bool result=true;
-    if (j.size()==control.size()){
-        for (int i=0; i<j.size();i++){
-            int aux=0;
-            for (int k=0;k<j.size();k++){
-                if (j[i]==control[k]){
+bool mismasJugadas(jugadas& j, jugadas& control) {
+    bool result = false;
+    if (j.size() == control.size()) {
+        result = true;
+        int contador = 0;
+        for (int i = 0; i < j.size(); i++) {
+            int aux = 0;
+            for (int k = 0; k < j.size(); k++) {
+                if (j[i] == control[k]) {
                     aux++;
                 }
             }
-            if (aux!=1){
-                result=false;
+            if (aux != 1) {
+                result = false;
+            } else contador++;
+            if (contador == j.size()) {
+                result = true;
             }
         }
     }
     return result;
 }
-
 
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
 bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t){
