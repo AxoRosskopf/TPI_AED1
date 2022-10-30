@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1"
+CMAKE_SOURCE_DIR = "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tpi.dir/depend.make
@@ -72,136 +72,136 @@ CMakeFiles/tpi.dir/main.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/main.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/main.obj: ../main.cpp
 CMakeFiles/tpi.dir/main.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tpi.dir/main.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/main.obj -MF CMakeFiles\tpi.dir\main.obj.d -o CMakeFiles\tpi.dir\main.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tpi.dir/main.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/main.obj -MF CMakeFiles\tpi.dir\main.obj.d -o CMakeFiles\tpi.dir\main.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\main.cpp"
 
 CMakeFiles/tpi.dir/main.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/main.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\main.cpp" > CMakeFiles\tpi.dir\main.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\main.cpp" > CMakeFiles\tpi.dir\main.i
 
 CMakeFiles/tpi.dir/main.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/main.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\main.cpp" -o CMakeFiles\tpi.dir\main.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\main.cpp" -o CMakeFiles\tpi.dir\main.s
 
 CMakeFiles/tpi.dir/auxiliares.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/auxiliares.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/auxiliares.obj: ../auxiliares.cpp
 CMakeFiles/tpi.dir/auxiliares.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tpi.dir/auxiliares.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/auxiliares.obj -MF CMakeFiles\tpi.dir\auxiliares.obj.d -o CMakeFiles\tpi.dir\auxiliares.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\auxiliares.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tpi.dir/auxiliares.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/auxiliares.obj -MF CMakeFiles\tpi.dir\auxiliares.obj.d -o CMakeFiles\tpi.dir\auxiliares.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\auxiliares.cpp"
 
 CMakeFiles/tpi.dir/auxiliares.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/auxiliares.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\auxiliares.cpp" > CMakeFiles\tpi.dir\auxiliares.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\auxiliares.cpp" > CMakeFiles\tpi.dir\auxiliares.i
 
 CMakeFiles/tpi.dir/auxiliares.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/auxiliares.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\auxiliares.cpp" -o CMakeFiles\tpi.dir\auxiliares.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\auxiliares.cpp" -o CMakeFiles\tpi.dir\auxiliares.s
 
 CMakeFiles/tpi.dir/ejercicios.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/ejercicios.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/ejercicios.obj: ../ejercicios.cpp
 CMakeFiles/tpi.dir/ejercicios.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tpi.dir/ejercicios.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/ejercicios.obj -MF CMakeFiles\tpi.dir\ejercicios.obj.d -o CMakeFiles\tpi.dir\ejercicios.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\ejercicios.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tpi.dir/ejercicios.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/ejercicios.obj -MF CMakeFiles\tpi.dir\ejercicios.obj.d -o CMakeFiles\tpi.dir\ejercicios.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\ejercicios.cpp"
 
 CMakeFiles/tpi.dir/ejercicios.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/ejercicios.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\ejercicios.cpp" > CMakeFiles\tpi.dir\ejercicios.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\ejercicios.cpp" > CMakeFiles\tpi.dir\ejercicios.i
 
 CMakeFiles/tpi.dir/ejercicios.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/ejercicios.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\ejercicios.cpp" -o CMakeFiles\tpi.dir\ejercicios.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\ejercicios.cpp" -o CMakeFiles\tpi.dir\ejercicios.s
 
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj: ../tests/cambiarBanderitaTEST.cpp
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj -MF CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.obj.d -o CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\cambiarBanderitaTEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.obj -MF CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.obj.d -o CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\cambiarBanderitaTEST.cpp"
 
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\cambiarBanderitaTEST.cpp" > CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\cambiarBanderitaTEST.cpp" > CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.i
 
 CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\cambiarBanderitaTEST.cpp" -o CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\cambiarBanderitaTEST.cpp" -o CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.s
 
 CMakeFiles/tpi.dir/tests/ganoTEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/ganoTEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/ganoTEST.obj: ../tests/ganoTEST.cpp
 CMakeFiles/tpi.dir/tests/ganoTEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tpi.dir/tests/ganoTEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/ganoTEST.obj -MF CMakeFiles\tpi.dir\tests\ganoTEST.obj.d -o CMakeFiles\tpi.dir\tests\ganoTEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\ganoTEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tpi.dir/tests/ganoTEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/ganoTEST.obj -MF CMakeFiles\tpi.dir\tests\ganoTEST.obj.d -o CMakeFiles\tpi.dir\tests\ganoTEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\ganoTEST.cpp"
 
 CMakeFiles/tpi.dir/tests/ganoTEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/ganoTEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\ganoTEST.cpp" > CMakeFiles\tpi.dir\tests\ganoTEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\ganoTEST.cpp" > CMakeFiles\tpi.dir\tests\ganoTEST.i
 
 CMakeFiles/tpi.dir/tests/ganoTEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/ganoTEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\ganoTEST.cpp" -o CMakeFiles\tpi.dir\tests\ganoTEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\ganoTEST.cpp" -o CMakeFiles\tpi.dir\tests\ganoTEST.s
 
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj: ../tests/jugarPlusTEST.cpp
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj -MF CMakeFiles\tpi.dir\tests\jugarPlusTEST.obj.d -o CMakeFiles\tpi.dir\tests\jugarPlusTEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\jugarPlusTEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/jugarPlusTEST.obj -MF CMakeFiles\tpi.dir\tests\jugarPlusTEST.obj.d -o CMakeFiles\tpi.dir\tests\jugarPlusTEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\jugarPlusTEST.cpp"
 
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/jugarPlusTEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\jugarPlusTEST.cpp" > CMakeFiles\tpi.dir\tests\jugarPlusTEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\jugarPlusTEST.cpp" > CMakeFiles\tpi.dir\tests\jugarPlusTEST.i
 
 CMakeFiles/tpi.dir/tests/jugarPlusTEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/jugarPlusTEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\jugarPlusTEST.cpp" -o CMakeFiles\tpi.dir\tests\jugarPlusTEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\jugarPlusTEST.cpp" -o CMakeFiles\tpi.dir\tests\jugarPlusTEST.s
 
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj: ../tests/minasAdyacentesTEST.cpp
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj -MF CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.obj.d -o CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\minasAdyacentesTEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.obj -MF CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.obj.d -o CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\minasAdyacentesTEST.cpp"
 
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\minasAdyacentesTEST.cpp" > CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\minasAdyacentesTEST.cpp" > CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.i
 
 CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\minasAdyacentesTEST.cpp" -o CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\minasAdyacentesTEST.cpp" -o CMakeFiles\tpi.dir\tests\minasAdyacentesTEST.s
 
 CMakeFiles/tpi.dir/tests/perdioTEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/perdioTEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/perdioTEST.obj: ../tests/perdioTEST.cpp
 CMakeFiles/tpi.dir/tests/perdioTEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tpi.dir/tests/perdioTEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/perdioTEST.obj -MF CMakeFiles\tpi.dir\tests\perdioTEST.obj.d -o CMakeFiles\tpi.dir\tests\perdioTEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\perdioTEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tpi.dir/tests/perdioTEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/perdioTEST.obj -MF CMakeFiles\tpi.dir\tests\perdioTEST.obj.d -o CMakeFiles\tpi.dir\tests\perdioTEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\perdioTEST.cpp"
 
 CMakeFiles/tpi.dir/tests/perdioTEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/perdioTEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\perdioTEST.cpp" > CMakeFiles\tpi.dir\tests\perdioTEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\perdioTEST.cpp" > CMakeFiles\tpi.dir\tests\perdioTEST.i
 
 CMakeFiles/tpi.dir/tests/perdioTEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/perdioTEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\perdioTEST.cpp" -o CMakeFiles\tpi.dir\tests\perdioTEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\perdioTEST.cpp" -o CMakeFiles\tpi.dir\tests\perdioTEST.s
 
 CMakeFiles/tpi.dir/tests/sugerir121TEST.obj: CMakeFiles/tpi.dir/flags.make
 CMakeFiles/tpi.dir/tests/sugerir121TEST.obj: CMakeFiles/tpi.dir/includes_CXX.rsp
 CMakeFiles/tpi.dir/tests/sugerir121TEST.obj: ../tests/sugerir121TEST.cpp
 CMakeFiles/tpi.dir/tests/sugerir121TEST.obj: CMakeFiles/tpi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tpi.dir/tests/sugerir121TEST.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/sugerir121TEST.obj -MF CMakeFiles\tpi.dir\tests\sugerir121TEST.obj.d -o CMakeFiles\tpi.dir\tests\sugerir121TEST.obj -c "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\sugerir121TEST.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tpi.dir/tests/sugerir121TEST.obj"
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpi.dir/tests/sugerir121TEST.obj -MF CMakeFiles\tpi.dir\tests\sugerir121TEST.obj.d -o CMakeFiles\tpi.dir\tests\sugerir121TEST.obj -c "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\sugerir121TEST.cpp"
 
 CMakeFiles/tpi.dir/tests/sugerir121TEST.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tpi.dir/tests/sugerir121TEST.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\sugerir121TEST.cpp" > CMakeFiles\tpi.dir\tests\sugerir121TEST.i
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\sugerir121TEST.cpp" > CMakeFiles\tpi.dir\tests\sugerir121TEST.i
 
 CMakeFiles/tpi.dir/tests/sugerir121TEST.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tpi.dir/tests/sugerir121TEST.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\tests\sugerir121TEST.cpp" -o CMakeFiles\tpi.dir\tests\sugerir121TEST.s
+	"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\tests\sugerir121TEST.cpp" -o CMakeFiles\tpi.dir\tests\sugerir121TEST.s
 
 # Object files for target tpi
 tpi_OBJECTS = \
@@ -234,7 +234,7 @@ tpi_EXTERNAL_OBJECTS =
 ../tpi.exe: CMakeFiles/tpi.dir/linklibs.rsp
 ../tpi.exe: CMakeFiles/tpi.dir/objects1.rsp
 ../tpi.exe: CMakeFiles/tpi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ..\tpi.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ..\tpi.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tpi.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -246,6 +246,6 @@ CMakeFiles/tpi.dir/clean:
 .PHONY : CMakeFiles/tpi.dir/clean
 
 CMakeFiles/tpi.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1" "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1" "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug" "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug" "C:\Users\Ariel\Google Drive\UBA\AED1\Laboratorio\TPI_AED1\cmake-build-debug\CMakeFiles\tpi.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1" "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1" "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug" "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug" "C:\Users\aicpv\Desktop\Computer Science\Algoritms\LabTP\TPI\TPI_AED1\cmake-build-debug\CMakeFiles\tpi.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/tpi.dir/depend
 

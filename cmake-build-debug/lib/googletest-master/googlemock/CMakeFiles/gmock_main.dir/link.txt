@@ -1,2 +1,2 @@
-C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc libgmock_maind.a CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj
-C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ranlib.exe libgmock_maind.a
+"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\ar.exe" qc libgmock_maind.a CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj
+"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\ranlib.exe" libgmock_maind.a

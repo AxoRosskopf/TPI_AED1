@@ -5,6 +5,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 
 #include "definiciones.h"
 #include "ejercicios.h"
@@ -21,17 +22,11 @@ bool tableroValido(tablero& tablero){
     }else return false;
 }
 
-bool tamanioDeTableroValido(tablero& tablero){
-    if (tablero.size()>0){
-        bool tamanioDeFila=true;
-        int i=0;
-        while (i<tablero.size() && tamanioDeFila== true){
-            if (tablero.size() != tablero[i].size()){
-                tamanioDeFila= false;
-            }
-            i++;
-        }
-
+bool tamanioDeTableroValido(tablero& t) {
+    for (auto i : t){
+        if (i.size() == t.size()){
+            return true;
+        }else return false;
     }
 }
 
@@ -94,9 +89,9 @@ int minasPisadas(jugadas& j ,tablero& t){
 }
 
 bool jugadasValidas(jugadas& j , tablero& t){
-    for (int i =0; i<j.size();i++){
-        if ( posicionValida(j[i].first,t.size())
-        && (numMinasAdyacentes(t,j[i].first) == j[i].second)){
+    for (auto i : j){
+        if ( posicionValida(i.first,t.size())
+        && (numMinasAdyacentes(t,i.first) == i.second)){
             return true;
         } else return false;
     }
@@ -109,15 +104,24 @@ bool juegoValido(tablero& t,jugadas& j){
     } else return false;
 }
 
+//bool jugadasNoRepetidas (jugadas& j){
+// for(int i=0 ; i < j.size();i++){
+//     for (int k = 0 ; k < j.size(); k++){
+//        if(j[i].first != j[k].first && (i != k)){
+//            return true;
+//        } else return false;
+//     }
+// }
+//}
+
 bool jugadasNoRepetidas (jugadas& j){
- for(int i=0 ; i < j.size();i++){
-     for (int k = 0 ; k < j.size(); k++){
-        if(j[i].first != j[k].first && (i != k)){
+    for(auto i : j){
+        if (count(j.begin(),j.end(),i)==1){
             return true;
-        } else return false;
-     }
- }
+        }else return false;
+    }
 }
+
 
 bool esBanderita(pos p, banderitas& b){
     bool result=false;
@@ -184,6 +188,19 @@ bool mismasBanderitas(banderitas& b, banderitas& control){
 }
 
 
+
+bool banderitasValidas(banderitas& b, tablero& t, jugadas& j) {
+    if (b.size() == 0) {
+        return true;
+    } else {
+        for (auto i: b) {
+            if (count(b.begin(), b.end(), i) == 1 && !fueJugada(i, j) && posicionValida(i, t.size()) || b.size() == 0) {
+                return true;
+            } else return false;
+        }
+    }
+}
+
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 5
 void incluirJugadaActual(pos pos1,jugadas & j, tablero& t){
     jugada jugada1 (pos1, minasAdyacentes(t,pos1));
@@ -224,6 +241,8 @@ bool mismasJugadas(jugadas& j, jugadas& control) {
 }
 
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
+
+
 bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t){
     bool result=false;
     for (int i=0;i<t.size();i++){
@@ -281,8 +300,6 @@ bool es121Vertical(pos p, jugadas& j){
     }
     return result;
 }
-
-
 
 
 

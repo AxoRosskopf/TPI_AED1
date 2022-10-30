@@ -29,7 +29,7 @@ bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero&
 void sacaBanderita(pos p,banderitas& b);
 void plantaBanderita(pos p,banderitas& b);
 bool mismasBanderitas(banderitas& b, banderitas& control);
-
+bool banderitasValidas(banderitas& b,tablero& t,jugadas& j);
 
 //Ejercicio 5
 void incluirJugadaActual(pos p,jugadas& j, tablero& t);

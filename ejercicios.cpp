@@ -41,21 +41,22 @@ bool perdio(tablero& t, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO gano ***********+++***********************/
+
 bool gano(tablero& t, jugadas& j) {
     bool result= true;
     for (int i=0;i<t.size();i++){
         for (int k=0;k<t.size();k++){
             pos pos1={i,k};
-            if (t[i][k]==cVACIA){
-                if (!fueJugada(pos1, j)) {
+            if (t[i][k]==cVACIA && !fueJugada(pos1, j)){
                     result = false;
-                }
             }
         }
     }
 
     return result;
 }
+
+
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
@@ -64,28 +65,20 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
         for (int i=0; i<t.size();i++){
             for (int k=0;k<t.size();k++){
                 pos pos1 (i,k);
-                if (!fueJugada(pos1,j) && !esBanderita(pos1,b)){
-                    if (esParteDelCaminoLibre(p,pos1,t)){
+                if (!fueJugada(pos1,j) && !esBanderita(pos1,b) && esParteDelCaminoLibre(p,pos1,t)){
                         jugarPlus(t,b,pos1,j);
                     }
                 }
             }
         }
     }
-}
 
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
-/*bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
-    bool hay=false;
-    if (juegoValido(t,j) && banderitasValidas(b,t,j)){
-        if (hayPosicionSugerible(j,b,t)){
-            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
-                hay=true;
-            }
-        }
-
+bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+   bool hay=false;
+    if (juegoValido(t,j) && banderitasValidas(b,t,j) && hayPosicionSugerible(j,b,t) && esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
+        hay=true;
     }
     return hay;
 }
-*/
