@@ -35,6 +35,11 @@ bool banderitasValidas(banderitas& b,tablero& t,jugadas& j);
 void incluirJugadaActual(pos p,jugadas& j, tablero& t);
 bool esParteDelCaminoLibre(pos partida, pos final, tablero& t);
 bool mismasJugadas(jugadas& j, jugadas& control);
+bool esAdyacente(pos p1, pos p2);
+bool mismaFila(pos p1, pos p2);
+bool mismaColumna(pos p1, pos p2);
+bool filaAdyacente(pos p1, pos p2);
+bool columnaAdyacente(pos p1, pos p2);
 
 
 //Ejecicio 6

@@ -1,2 +1,2 @@
-"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\ar.exe" qc libgmockd.a "CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
-"D:\Program Files\JetBrains\CLion 2022.2.1\bin\mingw\bin\ranlib.exe" libgmockd.a
+/usr/bin/ar qc libgmockd.a "CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+/usr/bin/ranlib libgmockd.a

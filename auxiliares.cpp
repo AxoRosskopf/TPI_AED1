@@ -15,35 +15,6 @@ using namespace std;
 
 
 // FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 1
-
-bool tableroValido(tablero& tablero){
-    if (tamanioDeTableroValido(tablero) & cantidadDeMinasValida(tablero)){
-        return true;
-    }else return false;
-}
-
-bool tamanioDeTableroValido(tablero& t) {
-    for (auto i : t){
-        if (i.size() == t.size()){
-            return true;
-        }else return false;
-    }
-}
-
-bool cantidadDeMinasValida(tablero& tablero){
-    int cantidadDeMinas=0;
-    for (int i=0; i<tablero.size(); i++){
-        for (int j=0;j<tablero[i].size();j++){
-            if (tablero[i][j]== true){
-                cantidadDeMinas++;
-            }
-        }
-    }
-    if (cantidadDeMinas<(tablero.size()*tablero.size())){
-        return true;
-    }else return false;
-}
-
 bool posicionValida(pos p, int n){
     bool result=false;
     if (p.first<n && p.second<n){
@@ -52,6 +23,8 @@ bool posicionValida(pos p, int n){
     return result;
 }
 
+//Complejidad n * n
+//Siendo n la cantidad de filas (y columnas) y tablero.
 int numMinasAdyacentes(tablero& t, pos p){
     int result=0;
     for (int i=-1; i<=1;i++){
@@ -64,6 +37,7 @@ int numMinasAdyacentes(tablero& t, pos p){
     return result;
 }
 
+//Complejidad 1
 bool esAdyacenteValida(pos p, int i, int j, tablero& t){
     if (p.first+i<t.size() && p.second+j<t.size() && (i!=0 || j!=0)){
         return true;
@@ -78,51 +52,8 @@ bool hayMinaEnPosicion(pos p, tablero& t){
         return true;
     }else return false;
 }
-int minasPisadas(jugadas& j ,tablero& t){
-    int minas = 0;
-    for(int i = 0; i<j.size(); i++){
-        if (hayMinaEnPosicion(j[i].first, t)){
-            minas++;
-        }
-    }
-    return minas;
-}
 
-bool jugadasValidas(jugadas& j , tablero& t){
-    for (auto i : j){
-        if ( posicionValida(i.first,t.size())
-        && (numMinasAdyacentes(t,i.first) == i.second)){
-            return true;
-        } else return false;
-    }
-}
-
-bool juegoValido(tablero& t,jugadas& j){
-    if (tableroValido(t)&& jugadasValidas(j,t)
-    && (minasPisadas(j,t) <= 1)){
-        return true;
-    } else return false;
-}
-
-//bool jugadasNoRepetidas (jugadas& j){
-// for(int i=0 ; i < j.size();i++){
-//     for (int k = 0 ; k < j.size(); k++){
-//        if(j[i].first != j[k].first && (i != k)){
-//            return true;
-//        } else return false;
-//     }
-// }
-//}
-
-bool jugadasNoRepetidas (jugadas& j){
-    for(auto i : j){
-        if (count(j.begin(),j.end(),i)==1){
-            return true;
-        }else return false;
-    }
-}
-
-
+//Complejidad b, siendo b el tamaño del vector banderitas.
 bool esBanderita(pos p, banderitas& b){
     bool result=false;
     for(int i = 0; i<b.size(); i++){
@@ -133,12 +64,13 @@ bool esBanderita(pos p, banderitas& b){
     return result;
 }
 
+//Complejidad j, siendo j el tamaño del vector j.
 bool fueJugada(pos p, jugadas& j){
     bool result= false;
     for(int i = 0; i<j.size(); i++){
         if (p == j[i].first){
             result=true;
-        } ;
+        }
     }
     return result;
 }
@@ -149,7 +81,7 @@ bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero&
         return true;
     }else return false;
 }
-
+//Complejidad b, siendo b el tamaño del vector banderitas.
 void sacaBanderita(pos p,banderitas& b){
     banderitas aux={};
     for (int i=0; i<b.size();i++){
@@ -189,28 +121,40 @@ bool mismasBanderitas(banderitas& b, banderitas& control){
 
 
 
-bool banderitasValidas(banderitas& b, tablero& t, jugadas& j) {
-    if (b.size() == 0) {
-        return true;
-    } else {
-        for (auto i: b) {
-            if (count(b.begin(), b.end(), i) == 1 && !fueJugada(i, j) && posicionValida(i, t.size()) || b.size() == 0) {
-                return true;
-            } else return false;
-        }
-    }
-}
-
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 5
 void incluirJugadaActual(pos pos1,jugadas & j, tablero& t){
     jugada jugada1 (pos1, minasAdyacentes(t,pos1));
     j.push_back(jugada1);
 }
 
+bool esAdyacente(pos p1, pos p2){
+    if (mismaFila (p1,p2) && columnaAdyacente(p1,p2)) return true;
+    else if (filaAdyacente(p1,p2) && mismaColumna(p1,p2)) return true;
+    else if (filaAdyacente(p1,p2) && columnaAdyacente(p1,p2)) return true;
+    else return false;
+}
+
+bool mismaFila(pos p1, pos p2){
+    return p1.first==p2.first;
+}
+
+bool mismaColumna(pos p1, pos p2){
+    return p1.second==p2.second;
+}
+
+
+bool columnaAdyacente(pos p1, pos p2){
+    return abs(p1.second-p2.second)==1;
+}
+
+bool filaAdyacente(pos p1, pos p2){
+    return abs(p1.first-p2.first)==1;
+}
+//Peor caso, complejidad t * t , siendo t tamaño de filas y columnas del tablero.
 bool esParteDelCaminoLibre(pos partida, pos final, tablero& t) {
     bool result=false;
-    if (esAdyacenteValida(partida,final.first, final.second,t)){
-        if (minasAdyacentes(t,final)==0){
+    if (esAdyacente(partida,final)){ // Complejidad 1
+        if (minasAdyacentes(t,final)==0){ //Complejidad peor caso t * t
             result=true;
         }
     }
