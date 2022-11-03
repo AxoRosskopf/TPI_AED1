@@ -73,9 +73,12 @@ bool fueJugada(pos p, jugadas& j){
     return result;
 }
 
+//Llamemos j a tamaño de vector jugadas, t a cantidad de filas/columnas del tablero y b a tamaño de vector banderitas.
+// Esta auxiliar es de complejidad j + b.
+// En el peor de los casos la suma de ambas vale t^2
 bool esPosicionSinJugarYSinBanderita(pos p, jugadas& j , banderitas& b, tablero& t){
     if(posicionValida(p,t.size())
-    && (!fueJugada(p,j)&& !esBanderita(p,b))){
+    && (!fueJugada(p,j)&& !esBanderita(p,b))){ // Complejidad j + b
         return true;
     }else return false;
 }
@@ -185,18 +188,20 @@ bool mismasJugadas(jugadas& j, jugadas& control) {
 
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
 
+//Tiene de complejidad 4j, que es lo mismo que O(j).
 bool esAdyacenteA121(pos p, jugadas& j){
     bool result=false;
     pos pos1 (p.first-1,p.second);
     pos pos2 (p.first+1,p.second);
     pos pos3 (p.first,p.second-1);
     pos pos4 (p.first,p.second+1);
-    if (es121Horizontal(pos1,j) || es121Horizontal(pos2,j) || es121Vertical(pos3,j) || es121Vertical(pos4,j)){
+    if (es121Horizontal(pos1,j) || es121Horizontal(pos2,j) || es121Vertical(pos3,j) || es121Vertical(pos4,j)){ //Complejidad j + j + j + j
         result=true;
     }
     return result;
 }
 
+//Complejidad O(j), siendo j el tamaño del vector jugadas.
 bool es121Horizontal(pos p, jugadas& j){
     bool result= false;
     int aux=0;
@@ -213,6 +218,7 @@ bool es121Horizontal(pos p, jugadas& j){
     return result;
 }
 
+//Complejidad O(j), siendo j el tamaño del vector jugadas.
 bool es121Vertical(pos p, jugadas& j){
     bool result= false;
     int aux=0;
