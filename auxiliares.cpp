@@ -13,8 +13,6 @@
 
 using namespace std;
 
-
-// FUNCIONES AUXILIARES USADAS EN EL EJERCICIO 1
 bool posicionValida(pos p, int n){
     bool result=false;
     if (p.first<n && p.second<n){
@@ -150,6 +148,7 @@ bool columnaAdyacente(pos p1, pos p2){
 bool filaAdyacente(pos p1, pos p2){
     return abs(p1.first-p2.first)==1;
 }
+
 //Peor caso, complejidad t * t , siendo t tamaño de filas y columnas del tablero.
 bool esParteDelCaminoLibre(pos partida, pos final, tablero& t) {
     bool result=false;
@@ -186,27 +185,12 @@ bool mismasJugadas(jugadas& j, jugadas& control) {
 
 //FUNCIONES AUXILIARES USADAS EN EL EJERCICI0 6
 
-
-bool hayPosicionSugerible(jugadas& j, banderitas& b, tablero& t){
-    bool result=false;
-    for (int i=0;i<t.size();i++){
-        for (int k=0; k<t.size(); k++){
-            pos p (i,k);
-            if (esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
-                result=true;
-            }
-        }
-    }
-    return result;
-}
-
 bool esAdyacenteA121(pos p, jugadas& j){
     bool result=false;
     pos pos1 (p.first-1,p.second);
     pos pos2 (p.first+1,p.second);
     pos pos3 (p.first,p.second-1);
     pos pos4 (p.first,p.second+1);
-
     if (es121Horizontal(pos1,j) || es121Horizontal(pos2,j) || es121Vertical(pos3,j) || es121Vertical(pos4,j)){
         result=true;
     }

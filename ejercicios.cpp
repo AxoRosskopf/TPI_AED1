@@ -91,9 +91,15 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
    bool hay=false;
-   //Falta el for
-    if (hayPosicionSugerible(j,b,t) && esPosicionSinJugarYSinBanderita(p,j,b,t) && esAdyacenteA121(p,j)){
-        hay=true;
+    for (int i = 0; i <t.size() ; ++i) {
+        for (int k = 0; k <t.size() ; ++k) {
+            pos pos1 (i,k);
+            if (esPosicionSinJugarYSinBanderita(pos1,j,b,t) && esAdyacenteA121(pos1,j)){
+                p=pos1;
+                hay=true;
+            }
+        }
+
     }
     return hay;
 }
